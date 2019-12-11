@@ -48,6 +48,8 @@ To overcome the sparse rewards and make it a long horizon task, they reset sever
 
 Block Stacking: stack 2-6 blocks 
 
+![image-20191211211229554](D:\Github\Reinforcement-Learning-in-Robotics\Related Works\Overcoming Exploration in Reinforcement Learning with Demonstrations.assets\image-20191211211229554.png)
+
 ### Ablation Experiment 
 
 - BC Loss: Without the behavior cloning loss, the method is significantly worse in every task they try. Since stacking the tower higher is risky and could result in lower reward if the agent knocks over a block that is already correctly placed, the agent chooses to stop after achieving a certain reward. BC Loss forces it to continue.
