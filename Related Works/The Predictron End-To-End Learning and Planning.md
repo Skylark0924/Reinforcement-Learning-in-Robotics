@@ -2,13 +2,15 @@
 
 Paper: https://arxiv.org/pdf/1612.08810.pdf
 
+Code: https://github.com/zhongwen/predictron
 
+Video: https://youtu.be/BeaLdaN2C3Q
 
 ![image-20191211163322741](D:\Github\Reinforcement-Learning-in-Robotics\Related Works\Untitled.assets\image-20191211163322741.png)
 
 ## Main Idea
 
-The main thought of this paper is that for a model-based algorithm the model is no need to be figurative for human since it is a model for agents. In addition, previous studies essentially separate modeling and planning(use the imagined trajectories to estimate), it will lead to undermatch. Therefore, they try to construct **a new architecture** called "**predictron**" which can integrate learning and planning into one end-to-end training procedure in order to build an **abstract** model only for agents.
+The main thought of this paper is that for a model-based algorithm the model is no need to be figurative for human since it is a model for agents. In addition, previous studies essentially separate modeling and planning(use the imagined trajectories to estimate), it will lead to undermatch. Therefore, they try to construct **a new differentiable architecture** called "**predictron**" which can integrate learning and planning into one end-to-end training procedure in order to build an **abstract** model only for agents.
 
 **At every step, a model is applied to an internal state, to produce a next state, reward, discount, and value estimate. This model is completely abstract and its only goal is to facilitate accurate value prediction.**
 
@@ -82,11 +84,33 @@ The result of predictions are almost perfect!
 
 ![image-20191211202507981](D:\Github\Reinforcement-Learning-in-Robotics\Related Works\Untitled.assets\image-20191211202507981.png)
 
+### Analyze
+
+#### Exploring the predictron $architecture
+
+- whether or not we use the structure of an MRP model.
+- whether a K-step accumulator or λ-accumulator is used to aggregate preturns
+- whether to use *usage weight* $\boldsymbol{\omega}^k$
+
+![image-20191212102538657](D:\Github\Reinforcement-Learning-in-Robotics\Related Works\The Predictron End-To-End Learning and Planning.assets\image-20191212102538657.png)
+
+#### Comparing to other architecture
+
+- whether we use a predictron or a general DNN
+- whether all cores share weights (as in a recurrent network), or each core uses separate weights (as in a feedforward network).
+- whether we include skip connections
+
+![image-20191212102714873](D:\Github\Reinforcement-Learning-in-Robotics\Related Works\The Predictron End-To-End Learning and Planning.assets\image-20191212102714873.png)
+
 ## Advantage
 
+- Learn an abstract model !
+- Jointly execute building a model(learning) and using a model(planning)
+- Can be used in semi-supervised learning
 
 
 
+## Conclusion for the note
 
-## Disadvantage
+The Predictron is an intriguing new thought. I am deeply agree with the idea of building an abstract model only for agents. Specially, the question that whether we need the interpretibily of the model is still a puzzle. I prefer machine can have their own knowledge which can be called *"Dark Knowledge"*.
 
