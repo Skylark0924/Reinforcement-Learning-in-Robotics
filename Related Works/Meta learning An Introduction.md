@@ -165,14 +165,6 @@ Loss function采用 negative log-likelihood: $\mathcal{L}(\theta)=-\log P_{\thet
 
 
 
-## Model-Based
-
-Model-Based与Metric-Based方法的区别在于不对 $P_\theta(y|\mathbb{x})$ 的形式做假设，而是依靠一个可以快速学习的model。model能够快速更新参数，得益于其内部结构，或由另一个元学习器模型来控制。也就是说，Model-Based方法是在寻找最优架构。
-
-### Memory-Augmented Neural Networks(MANN)
-
-
-
 ## Optimization-Based 
 
 我们知道传统的深度学习网络参数的更新，都是通过gradient backpropagation实现的。但是这种方式并不适用于少样本的情况（样本少，梯度方向无法表征总体梯度方向，易发散）。因此若想在少样本的情况下依然能够很好的学习，就需要在optimization方式上进行改变。这就是Optimization-Based meta-learning(就是上文所说的Learner and Meta-Learner)的思路。
@@ -398,6 +390,147 @@ $$
 
 
 
+## Model-Based
+
+Model-Based与Metric-Based方法的区别在于不对 $P_\theta(y|\mathbb{x})$ 的形式做假设，而是依靠一个可以快速学习的model。model能够快速更新参数，得益于其内部结构，或由另一个元学习器模型来控制。也就是说，Model-Based方法是在寻找最优架构。
+
+### Memory-Augmented Neural Networks(MANN)
+
+既然 meta-learning 的目标是让其能够在过往知识的基础上，快速地学习新知识，那么给model加一个**memory存储器**就是很自然的想法了。这样的model被称作**Memory-Augmented Neural Networks(MANN)**。虽然RNN, LSTM这种循环神经网络也具有记忆，但是是内部记忆，而MANN就简单粗暴很多，类似于DQN的experience replay buffer。
+
+[Neural Turing Machines](https://lilianweng.github.io/lil-log/2018/06/24/attention-attention.html#neural-turing-machines) (相关博客 [中](https://zhuanlan.zhihu.com/p/30383994) [英](https://lilianweng.github.io/lil-log/2018/06/24/attention-attention.html#neural-turing-machines)）和 [Memory Networks](https://arxiv.org/abs/1410.3916) (相关博客 [中](https://zhuanlan.zhihu.com/p/32257642)) 都是利用memory来促进学习过程的先驱。在神经图灵机的基础上，[Santoro et al. (2016)](http://proceedings.mlr.press/v48/santoro16.pdf) 对训练设置和内存检索机制做了一些修改，提出了一种新的‘寻址机制’，用于决定对如何对记忆向量分配注意力权重。
+
+#### Neural Turing Machines
+
+神经图灵机的结构如下图所示，它构建了一个**controller**用于学习如何通过 soft attention 读取和写入memory。Attention weights 是通过寻址机制生成的，寻址机制包含基于内容和基于位置两部分。
+
+<img src="./Meta learning An Introduction.assets/NTM.png" alt="NTM" style="zoom: 25%;" />
+
+#### MANN for Meta-Learning
+
+![NTM](./Meta learning An Introduction.assets/mann-meta-learning.png)
+
+如果要将memory network这种方法用到meta-learning中，就要做到以下两点：
+
+- 存储的信息相对稳定
+- 存储空间大小不受模型参数大小限制
+
+由上图(a)知，这是一个LSTM网络，它以($\mathbf{x}_{t+1}, y_{t}$)的形式作为输入，即前一个timestep的true label在下一个timestep作为输入的一部分。MANN借由这种方式使memory保存更长时间，内存必须保留当前输入，直到以后出现标签，然后检索旧信息以进行相应的预测。如上图(b)，添加了external memory存储上一次的x输入，这使得下一次输入后进行反向传播时，可以让y label和x建立联系，使得之后的x能够通过外部记忆获取相关图像进行比对来实现更好的预测。图(b)中Bind and Encode阶段就是“写”操作，而Retrieve Bound Information阶段就是“读”操作。
+
+
+
+下面从**read**和**write**两个主要部分介绍MANN：
+
+**Read the memory**
+
+Read attention 是基于**内容相似度**的，即对于每一时刻输入的 $\mathbf{x}_t$，先映射成特征向量 $k_t$，然后跟memory buffer中的记忆向量进行相似度比较，相似度大则给与较大的权重。
+
+MANN使用的是**cosine similarity**，并用**softmax**进行正则化。最终读取的向量 $\mathbf{r}_t$ 就是memory的加权和：
+$$
+\mathbf{r}_{i}=\sum_{i=1}^{N} w_{t}^{r}(i) \mathbf{M}_{t}(i), \text { where } w_{t}^{r}(i)=\operatorname{softmax}\left(\frac{\mathbf{k}_{t} \cdot \mathbf{M}_{t}(i)}{\left\|\mathbf{k}_{t}\right\| \cdot\left\|\mathbf{M}_{t}(i)\right\|}\right)
+$$
+其中，$\mathbf{M}_t$ 表示记忆矩阵，$\mathbf{M}_t(i)$ 表示记忆矩阵的第i行。
+
+
+
+**Write the memory**
+
+**Least Recently Used Access**（LRUA）编写器是为MANN设计的，以便在元学习的情况下更好地工作。LRUA倾向于将新内容写到**使用最少**的存储位置或**最近使用**的存储位置。
+
+- 取代使用最少：让memory buffer保留常用信息 (see [LFU](https://en.wikipedia.org/wiki/Least_frequently_used))
+- 取代最近使用：这样做的动机是，一旦检索到一条信息，它可能会在一段时间内不会再次被调用 (see [MRU](https://en.wikipedia.org/wiki/Cache_replacement_policies#Most_recently_used_(MRU)))
+
+为了实现上述写入目标，LRUA设计了一些权重：
+
+- $\mathbf{w}_t^u$ 是使用权重，由读写权重 $\mathbf{w}_t^r, \mathbf{w}_t^w$ 决定，$\gamma$ 为折扣因子
+- 读权重就不解释了，写在上面了
+- 写权重上一timestep的读权重与上一timestep的least-used权重的插值
+- least-used权重 $\mathbf{w}_t^{lu}$ 是由使用权重推导得来，
+
+$$
+\begin{aligned}
+&w_{t}^{u} \leftarrow \gamma w_{t-1}^{u}+w_{t}^{r}+w_{t}^{w}\\
+&w_{t}^{l u}=\left\{\begin{array}{ll}
+{0} & {\text{if } w_{t}^{u}(i)>m\left(w_{t}^{u}, n\right)} \\
+{1} & {\text{if } w_{t}^{u}(i) \leq m\left(w_{t}^{u}, n\right)}
+\end{array}\right.\\
+&w_{t}^{w} \leftarrow \sigma(\alpha) w_{t-1}^{r}+(1-\sigma(\alpha)) w_{t-1}^{l u}
+\end{aligned}
+$$
+
+最后，记忆矩阵的更新方式如下：
+
+$$
+\mathbf{M}_{t}(i)=\mathbf{M}_{t-1}(i)+w_{t}^{w}(i) \mathbf{k}_{t}, \forall i
+$$
+
+
+
+### Meta Networks
+
+**Meta Networks** ([Munkhdalai & Yu, 2017](https://arxiv.org/abs/1703.00837)), short for **MetaNet**，是一种用于跨任务快速泛化的体系结构和训练流程。
+
+MetaNet 主要由 Fast weights 和 Slow weights 组成。
+
+- Fast weights：用于跨任务的泛化。由于使用梯度更新的小样本学习速度慢，这里就设想使用更快的方式：**利用一个神经网络来生成另一个神经网络的参数**！
+- Slow weights：指普通的基于SGD等优化的参数
+
+在 MetaNet 中，**损失梯度信息**被作为 **meta information** ，用来生成fast weights。在神经网络中，将slow weights和fast weights结合起来进行预测。
+
+<img src="./Meta learning An Introduction.assets\combine-slow-fast-weights.png" alt="slow-fast-weights" style="zoom:33%;" />
+
+ 其中，⨁是按元素求和。
+
+#### Model Component
+
+- 一个将input编码的embedding function $f_\theta$. 这跟  [Siamese Neural Network](https://zhuanlan.zhihu.com/p/99730942) 一样，用于判断两个样本是否属于同一class
+- 一个base leaner model $g_\phi$. 
+
+至此，这个模型和 [Relation Network](https://zhuanlan.zhihu.com/p/99730942) 没什么区别。
+
+那么，区别在于，MetaNet 对上述两个model的模型进行了下图这样的**快速生成**！
+
+<img src="./Meta learning An Introduction.assets/v2-2d61ff11eb1a5a9e52d6c12eb333eb4b_hd.jpg" alt="img" style="zoom: 80%;" />
+
+所以我们还需要两个model $F,G$ 来生成 $f,g$ 的fast weights:
+
+- $F_\omega$: 一个以 $\omega$ 为参数的LSTM. 它将 embedding function $f_\theta$ loss的梯度作为输入，来生成 $\theta^+$
+- $G_{\nu}$: 一个以 $\nu$ 为参数的NN. 它将base learner的loss梯度作为输入，生成 $\phi^+$
+
+了解了这些，终于可以看看 MetaNet 长什么样了。还是和之前一样，训练集由 support set $\mathcal{D}_{support}=\left\{\mathbf{x}_{i}^{\prime}, \boldsymbol{y}_{i}^{\prime}\right\}_{i=1}^{K}$ 和 prediction/query set $\mathcal{D}_{pred}=\left\{\mathbf{x}_{i}, {y}_{i}\right\}_{i=1}^{L}$ 构成，现在我们的模型包含了四个子模型，以及四种参数 $(\theta, \phi, \omega, \nu)$:
+
+![meta-net](./Meta learning An Introduction.assets/meta-network.png)
+
+#### Training Process
+
+1. 每个timestep，从support set sample一对数据，利用embedding function求二者距离并计算loss: $\mathcal{L}_{t}^{\mathrm{emb}}=\mathbf{1}_{y_{i}^{\prime}=y_{j}^{\prime}} \log P_{t}+\left(1-\mathbf{1}_{y_{i}^{\prime}=y_{j}^{\prime}}\right) \log \left(1-P_{t}\right),$ where $P_{t}=\sigma\left(\mathbf{W}\left|f_{\theta}\left(\mathbf{x}_{(t, 1)}\right)-f_{\theta}\left(\mathbf{x}_{(t, 2)}\right)\right|\right)$
+
+2. 计算task-level fast weights $\theta^{+}=F_{w}\left(\nabla_{\theta} \mathcal{L}_{1}^{\mathrm{emb}}, \ldots, \mathcal{L}_{T}^{\mathrm{emb}}\right)$
+
+3. 便览support set中的数据，并计算example-level fast weights。同时，更新学习到的input表征：
+
+   - Base learner输出一个概率分布：$P\left(\hat{y}_{i} | \mathbf{x}_{i}\right)=g_{\phi}\left(\mathbf{x}_{i}\right)$ 并用交叉熵计算损失$\mathcal{L}_{i}^{\text {task }}=y_{i}^{\prime} \log g_{\phi}\left(\mathbf{x}_{i}^{\prime}\right)+\left(1-y_{i}^{\prime}\right) \log \left(1-g_{\phi}\left(\mathbf{x}_{i}^{\prime}\right)\right)$
+   - 计算example-level fast weights $\phi_{i}^{+}=G_{v}\left(\nabla_{\phi} \mathcal{L}_{i}^{\mathrm{task}}\right)$ 并将其存入'value' memory $M$ 的第 i 个位置
+   - 同时使用slow weights和fast weights计算support example的输入表征 $r_{i}^{\prime}=f_{\theta, \theta^{+}}\left(\mathbf{x}_{i}^{\prime}\right)$ 并存入'key' memory $R$ 的第 i 个位置
+
+4. 最后，和往常一样，使用prediction set的样本来计算训练损失
+
+   - 同时使用slow weights和fast weights计算prediction example的输入表征 $r_{j}^{\prime}=f_{\theta, \theta^{+}}\left(\mathbf{x}_{j}\right)$
+
+   - 与上面的MANN类似，通过学习输入表征与记忆矩阵 $R$ 之间的关系，求得读操作的权重：
+     $$
+     \begin{aligned}
+     a_{j} &=\operatorname{cosine}\left(\mathbf{R}, r_{j}\right)=\left[\frac{r_{1}^{\prime} \cdot r_{j}}{\left\|r_{1}^{\prime}\right\| \cdot\left\|r_{j}\right\|}, \ldots, \frac{r_{N}^{\prime} \cdot r_{j}}{\left\|r_{N}^{\prime}\right\| \cdot\left\|r_{j}\right\|}\right] \\
+     \phi_{j}^{+} &=\operatorname{softmax}\left(a_{j}\right)^{\top} \mathbf{M}
+     \end{aligned}
+     $$
+
+   - 更新training loss: $\mathcal{L}_{\text {train }} \leftarrow \mathcal{L}_{\text {train }}+\mathcal{L}^{\text {task }}\left(g_{\phi,\phi^+}\left(\mathbf{x}_{i}\right), y_{i}\right)$
+
+5. 利用 $\mathcal{L}_{train}$ 更新权重 $(\theta, \phi, \omega, \nu)$
+
+
+
 ## Reference
 
 1. [Meta-Learning: Learning to Learn Fast](https://lilianweng.github.io/lil-log/2018/11/30/meta-learning.html)
@@ -409,7 +542,15 @@ $$
 7. [Model-Agnostic Meta-Learning （MAML）模型介绍及算法详解](https://zhuanlan.zhihu.com/p/57864886)
 8. [Reptile: A Scalable Meta-Learning Algorithm](https://openai.com/blog/reptile/)
 9. [Reptile-一阶元学习算法](https://www.cnblogs.com/veagau/p/11816163.html)
+10. [Neural Turing Machines](https://lilianweng.github.io/lil-log/2018/06/24/attention-attention.html#neural-turing-machines) 
+11. [Memory Networks](https://arxiv.org/abs/1410.3916)
+12. [论文笔记 - Memory Networks 系列](https://zhuanlan.zhihu.com/p/32257642)
+13. [元学习论文Meta Learning with MANN翻译及分析](https://zhuanlan.zhihu.com/p/84411963)
+14. [Meta-Learning(2)---Memory based方法](https://zhuanlan.zhihu.com/p/61037404)
+15. [Meta-Learning论文笔记：Meta Network](https://zhuanlan.zhihu.com/p/66884855)
 
 
+
+**十分感谢 lilianweng's blog，让我受益匪浅！**
 
 *Originally published at* [*https://github.com/Skylark0924/Reinforcement-Learning-in-Robotics/*](https://github.com/Skylark0924/Reinforcement-Learning-in-Robotics/blob/master/Related Works/Overcoming Exploration in Reinforcement Learning with Demonstrations.md)*.*
