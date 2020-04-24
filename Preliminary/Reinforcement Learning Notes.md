@@ -1,3 +1,5 @@
+> 请使用 markdown 编辑器阅读，推荐使用 Typora。
+
 # Preliminary
 
 ## 马尔可夫决策过程MDP
