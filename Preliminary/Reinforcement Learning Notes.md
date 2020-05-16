@@ -15,11 +15,11 @@
 
 ### 马尔可夫决策过程
 
-一个马尔可夫决策过程由一个五元组构成$M = (S, A, P_{sa}, 𝑅,\gamma)$ [注1]
+一个马尔可夫决策过程由一个五元组构成$M = (S, A, P_{s}^a, 𝑅,\gamma)$ [注1]
 
 - S: 表示状态集(states)，有$s∈S$，$s_i$表示第i步的状态。
 - A:表示一组动作(actions)，有$a∈A$，$a_i$表示第i步的动作。
-- $𝑃_{sa}$: 表示状态转移概率。$𝑃_{s𝑎}$ 表示的是在当前$s ∈ S$状态下，经过$a ∈ A$作用后，会转移到的其他状态的概率分布情况。比如，在状态s下执行动作$a$，转移到m的概率可以表示为$p(s'|s,a)$。
+- $𝑃_{s} ^a$: 表示状态转移概率。$𝑃_{s𝑎}$ 表示的是在当前$s ∈ S$状态下，经过$a ∈ A$作用后，会转移到的其他状态的概率分布情况。比如，在状态s下执行动作$a$，转移到m的概率可以表示为$p(s'|s,a)$。
 - $R: S×A⟼ℝ$ ，R是回报函数(reward function)。有些回报函数状态$S$的函数，可以简化为$R: S⟼ℝ$。如果一组$(s,a)$转移到了下个状态$s'$，那么回报函数可记为$r(s'|s, a)$。如果$(s,a)$对应的下个状态s'是唯一的，那么回报函数也可以记为$r(s,a)$。
 - $\gamma$: discount rate，作为未来回报的折扣。
 
@@ -33,11 +33,11 @@
 
 
 
-### 值函数(value function)
+## 值函数(value function)
 
 增强学习学到的是一个从环境状态到动作的映射（即行为策略），记为策略$π: S→A$。而增强学习往往又具有延迟回报的特点: 如果在第n步输掉了棋，那么只有状态$s_n$和动作$a_n$获得了立即回报$r(s_n,a_n)=-1$，前面的所有状态立即回报均为0。所以对于之前的任意状态s和动作a，立即回报函数r(s,a)无法说明策略的好坏。因而需要定义值函数(value function，又叫效用函数)来<font color=#FF8C00>**表明当前状态下策略π的长期影响**</font>。
 
-#### 状态值函数(state value function)
+### 状态值函数(state value function)
 
 <font color=#FF8C00>**重点看第三个式子**</font>
 
@@ -62,7 +62,7 @@ b)是采用策略π的情况下期望的平均回报；
 c)是**值函数最常见的形式**，式中γ∈[0,1]称为折合因子，表明了未来的回报相对于当前回报的重要程度。特别的，γ=0时，相当于只考虑立即不考虑长期回报，γ=1时，将长期回报和立即回报看得同等重要。
 
 $$
-\begin{array}{l}{V^{\pi}(\mathrm{s})=E_{\pi}\left[\mathrm{r}_{0}+\gamma \mathrm{r}_{1}+\gamma^{2} \mathrm{r}_{2}+\gamma^{3} \mathrm{r}_{3}+\ldots | s_{0}=s\right]} \\ {=E_{\pi}\left[r_{0}+\gamma E\left[\gamma \mathrm{r}_{1}+\gamma^{2} \mathrm{r}_{2}+\gamma^{3} \mathrm{r}_{3}+\ldots\right] | s_{0}=s\right]} \\ {=E_{\pi}\left[\mathrm{r}\left(\mathrm{s}^{\prime} | \mathrm{s}, \mathrm{a}\right)+\gamma V^{\pi}(\mathrm{s'}) | s_{0}=s\right]}\end{array}
+\begin{aligned}V^{\pi}(\mathrm{s})&=E_{\pi}\left[r_{0}+\gamma r_{1}+\gamma^{2} r_{2}+\gamma^{3} r_{3}+\ldots | s_{0}=s\right] \\ &=E_{\pi}\left[r_{0}+\gamma E\left[\gamma r_{1}+\gamma^{2} r_{2}+\gamma^{3} r_{3}+\ldots\right] | s_{0}=s\right] \\ &=E_{\pi}\left[r\left(\mathrm{s}^{\prime} | \mathrm{s}, \mathrm{a}\right)+\gamma V^{\pi}(\mathrm{s'}) | s_{0}=s\right]\end{aligned}
 $$
 给定策略π和初始状态s，则动作$a=π(s)$，下个时刻将以概率$p(s'|s,a)$转向下个状态$s'$，那么上式的期望可以拆开，可以重写为：
 
@@ -71,7 +71,7 @@ V^{\pi}(\mathrm{s})=\sum_{s \in S} p\left(\mathrm{s}^{\prime} | \mathrm{s}, \mat
 $$
 **注意：**在$V^π(s)$中，π和初始状态s是我们给定的，而初始动作a是由策略π和状态s决定的，即a=π(s)。
 
-#### 动作值函数(action value function Q函数)
+### 动作值函数(action value function Q函数)
 
 $$
 Q^{\pi}(\mathrm{s}, \mathrm{a})=E\left[\sum_{i=0}^{\infty} \gamma^{i} r_{i} | \mathrm{s}_{0}=\mathrm{s}, \mathrm{a}_{0}=\mathrm{a}\right]
@@ -111,7 +111,7 @@ $V^\pi$和$Q^\pi$的表达式总结如下：
 
 $$
 \begin{equation}\label{bellman}
-{V^{\pi}(\mathrm{s})=\sum_{s^{\prime} \in S} p\left(\mathrm{s}^{\prime} | \mathrm{s}, \pi(\mathrm{s})\right)\left[\mathrm{r}\left(\mathrm{s}^{\prime} | \mathrm{s}_{2} \pi(\mathrm{s})\right)+\gamma V^{\pi}(\mathrm{s})\right]=E_{\pi}\left[r\left(s^{\prime} | s, a\right)+\gamma V^{\pi}(\mathrm{s}) | s_{0}=s\right]} \\ {Q^{\pi}(\mathrm{s}, \mathrm{a})=\sum_{s^{\prime} \in S} p\left(\mathrm{s}^{\prime} | \mathrm{s}, \mathrm{a}\right)\left[\mathrm{r}\left(\mathrm{s}^{\prime} | \mathrm{s}, \mathrm{a}\right)+\gamma V^{\pi}\left(\mathrm{s}^{\prime}\right)\right]=E_{\pi}\left[r\left(s^{\prime} | s, a\right)+\gamma V^{\pi}\left(\mathrm{s}^{\prime}\right) | s_{0}=s, \mathrm{a}_{0}=\mathrm{a}\right]}\end{equation}
+{V^{\pi}(\mathrm{s})=\sum_{s^{\prime} \in S} p\left(\mathrm{s}^{\prime} | \mathrm{s}, \pi(\mathrm{s})\right)\left[\mathrm{r}\left(\mathrm{s}^{\prime} | \mathrm{s}_{2} \pi(\mathrm{s})\right)+\gamma V^{\pi}(\mathrm{s'})\right]=E_{\pi}\left[r\left(s^{\prime} | s, a\right)+\gamma V^{\pi}(\mathrm{s'}) | s_{0}=s\right]} \\ {Q^{\pi}(\mathrm{s}, \mathrm{a})=\sum_{s^{\prime} \in S} p\left(\mathrm{s}^{\prime} | \mathrm{s}, \mathrm{a}\right)\left[\mathrm{r}\left(\mathrm{s}^{\prime} | \mathrm{s}, \mathrm{a}\right)+\gamma V^{\pi}\left(\mathrm{s}^{\prime}\right)\right]=E_{\pi}\left[r\left(s^{\prime} | s, a\right)+\gamma V^{\pi}\left(\mathrm{s}^{\prime}\right) | s_{0}=s, \mathrm{a}_{0}=\mathrm{a}\right]}\end{equation}
 $$
 在动态规划中，上面两个式子称为**贝尔曼方程**，它表明了<font color=#FF8C00>**当前状态的值函数与下个状态的值函数的关系**  。</font>
 
@@ -612,7 +612,7 @@ As explained in[ this really good article](https://jaromiru.com/2016/11/07/lets-
 
 Policy gradient输出不是 action 的 value, 而是具体的那一个 action, 这样 policy gradient 就跳过了 value 这个阶段.
 
-**优势：**
+#### Advantages
 
 1. 输出的这个 action 可以是一个**连续值**, 之前我们说到的 value-based 方法输出的都是不连续的值, 然后再选择值最大的 action. 而 policy gradient 可以在一个连续分布上选取 action.
 
@@ -641,7 +641,7 @@ $$
 
 We must find the best parameters (θ) to maximize a score function, J(θ).
 $$
-J(\theta)=E_{\pi\theta}[\sum\gamma r]
+J(\theta)=E_{\pi_\theta}[\sum\gamma r]
 $$
 There are two steps:
 
@@ -667,7 +667,7 @@ There are two steps:
 
    ![image-20191205092649257](D:\Github\Mad-Learning\RL\Reinforcement Learning Notes.assets\image-20191205092649257.png)
 
-#### Policy gradient asscent
+##### Policy gradient asscent
 
 $$
 \theta\leftarrow \theta + \alpha\nabla_\theta J(\theta)
@@ -708,7 +708,53 @@ It is hard to differentiating $\pi$, unless we can transform it into a **logarit
 
 其中，$\nabla log \pi_{\theta}(s_t,a_t)v_t$表示在状态 $s$对所选动作的 $a$ 的吃惊度，$\pi_{\theta}(s_t,a_t)$代表 $Policy(s,a)$，其概率越小，反向的 $log(Policy(s,a))$(即 `-log(P)`) 反而越大. 如果在 `Policy(s,a)` 很小的情况下, 拿到了一个大的 `R`, 也就是大的 `V`, 那 $\nabla log \pi_{\theta}(s_t,a_t)v_t$ 就更大, 表示更吃惊, (**我选了一个不常选的动作, 却发现原来它能得到了一个好的 reward, 那我就得对我这次的参数进行一个大幅修改**). 这就是吃惊度的物理意义。
 
+### PPO(Proximal Policy Optimization)
 
+#### Theory
+
+**The central idea of Proximal Policy Optimization is to avoid having too large policy update.** To do that, we use a ratio that will tells us the difference between our new and old policy and clip this ratio from 0.8 to 1.2. Doing that will ensure **that our policy update will not be too large.**
+
+The problem comes from the step size of gradient ascent:
+
+- Too small, **the training process was too slow**
+- Too high, **there was too much variability in the training.**
+
+The idea is that PPO improves the stability of the Actor training by limiting the policy update at each training step.
+
+To be able to do that PPO introduced a new objective function called “**Clipped surrogate objective function**” that **will constraint the policy change in a small range using a clip.**
+
+Instead of using log pi to trace the impact of the actions, we can use **the ratio between the probability of action under current policy divided by the probability of the action under previous policy.**
+$$
+r_t(\theta)=\dfrac{\pi_\theta(a_t|s_t)}{\pi_{\theta_{old}}(a_t|s_t)}, \text{so } r(\theta_{old})=1
+$$
+
+- If $r_t(θ)$ >1, it means that the **action is more probable in the current policy than the old policy.**
+- If $r_t(θ)$ is between 0 and 1: it means that the **action is less probable for current policy than for the old one.**
+
+As consequence, our new objective function could be:
+$$
+L^{CPI}(\theta)=\hat{\mathbb{E}}_t\lbrack\dfrac{\pi_\theta(a_t|s_t)}{\pi_{\theta_{old}}(a_t|s_t)}\hat{A}_t\rbrack=\hat{\mathbb{E}}_t[r_t(\theta)\hat{A}_t]
+$$
+**By doing that we’ll ensure that not having too large policy update because the new policy can’t be too different from the older one.**
+
+To do that we have two solutions:
+
+- TRPO (Trust Region Policy Optimization) uses KL divergence constraints outside of the objective function to constraint the policy update. But this method **is much complicated to implement and it takes more computation time.**
+- PPO clip probability ratio directly in the objective function with its Clipped surrogate objective function.
+
+![image-20191205121930328](D:\Github\Mad-Learning\RL\Reinforcement Learning Notes.assets\image-20191205121930328.png)
+
+The final Clipped Surrogate(代理) Objective Loss:
+
+![image-20191205190844049](D:\Github\Mad-Learning\RL\Reinforcement Learning Notes.assets\image-20191205190844049.png)
+
+#### Advantage
+
+It can be used in both discrete and continuous control.
+
+#### Disadvantage
+
+on-policy -> data inefficient
 
 ## Actor-Critic
 
@@ -759,53 +805,7 @@ While A2C is synchronous, that the only difference. We wait until all workers ha
 
 The problem of A3C is explained in [this awesome article](https://lilianweng.github.io/lil-log/2018/04/08/policy-gradient-algorithms.html#a2c). Because of the asynchronous nature of A3C, some workers (copies of the Agent) will be playing with older version of the parameters. Thus the aggregating update will not be optimal.
 
-### PPO(Proximal Policy Optimization)
 
-#### Theory
-
-**The central idea of Proximal Policy Optimization is to avoid having too large policy update.** To do that, we use a ratio that will tells us the difference between our new and old policy and clip this ratio from 0.8 to 1.2. Doing that will ensure **that our policy update will not be too large.**
-
-The problem comes from the step size of gradient ascent:
-
-- Too small, **the training process was too slow**
-- Too high, **there was too much variability in the training.**
-
-The idea is that PPO improves the stability of the Actor training by limiting the policy update at each training step.
-
-To be able to do that PPO introduced a new objective function called “**Clipped surrogate objective function**” that **will constraint the policy change in a small range using a clip.**
-
-Instead of using log pi to trace the impact of the actions, we can use **the ratio between the probability of action under current policy divided by the probability of the action under previous policy.**
-$$
-r_t(\theta)=\dfrac{\pi_\theta(a_t|s_t)}{\pi_{\theta_{old}}(a_t|s_t)}, \text{so } r(\theta_{old})=1
-$$
-
-- If $r_t(θ)$ >1, it means that the **action is more probable in the current policy than the old policy.**
-- If $r_t(θ)$ is between 0 and 1: it means that the **action is less probable for current policy than for the old one.**
-
-As consequence, our new objective function could be:
-$$
-L^{CPI}(\theta)=\hat{\mathbb{E}}_t\lbrack\dfrac{\pi_\theta(a_t|s_t)}{\pi_{\theta_{old}}(a_t|s_t)}\hat{A}_t\rbrack=\hat{\mathbb{E}}_t[r_t(\theta)\hat{A}_t]
-$$
-**By doing that we’ll ensure that not having too large policy update because the new policy can’t be too different from the older one.**
-
-To do that we have two solutions:
-
-- TRPO (Trust Region Policy Optimization) uses KL divergence constraints outside of the objective function to constraint the policy update. But this method **is much complicated to implement and it takes more computation time.**
-- PPO clip probability ratio directly in the objective function with its Clipped surrogate objective function.
-
-![image-20191205121930328](D:\Github\Mad-Learning\RL\Reinforcement Learning Notes.assets\image-20191205121930328.png)
-
-The final Clipped Surrogate(代理) Objective Loss:
-
-![image-20191205190844049](D:\Github\Mad-Learning\RL\Reinforcement Learning Notes.assets\image-20191205190844049.png)
-
-#### Advantage
-
-It can be used in both discrete and continuous control.
-
-#### Disadvantage
-
-on-policy -> data inefficient
 
 ### DDPG(Deep Deterministic Policy Gradient )
 
