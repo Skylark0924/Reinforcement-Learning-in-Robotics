@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="pingback" href="https://syncedreview.com/xmlrpc.php">
+<script type="text/javascript">
+  WebFontConfig = {"google":{"families":["Roboto+Slab:b:latin,latin-ext"]},"typekit":{"id":"ysk1yqm"}};
+  (function() {
+    var wf = document.createElement('script');
+    wf.src = 'https://syncedreview.com/wp-content/mu-plugins/wpcomsh/vendor/automattic/custom-fonts/js/webfont.js';
+    wf.type = 'text/javascript';
+    wf.async = 'true';
+    var s = document.getElementsByTagName('script')[0];
+    s.parentNode.insertBefore(wf, s);
+	})();
+</script><style id="jetpack-custom-fonts-css">.wf-active body{font-family:"ff-meta-web-pro-1","ff-meta-web-pro-2",sans-serif}.wf-active .entry-content, .wf-active .entry-content dl, .wf-active .entry-content ol, .wf-active .entry-content p, .wf-active .entry-content table, .wf-active .entry-content ul, .wf-active .entry-header .intro p, .wf-active .entry-summary, .wf-active .section-about-column-one p, .wf-active .widget, .wf-active p.text-big, .wf-active p.text-small{font-family:"ff-meta-web-pro-1","ff-meta-web-pro-2",sans-serif}.wf-active #colophon .widget, .wf-active .contact-form input[type="submit"], .wf-active .entry-content blockquote p, .wf-active .entry-content p span.uppercase, .wf-active .section-about-column-one p cite, .wf-active .section-about-column-two  .jetpack-social-navigation ul li a, .wf-active .site-content div.wpcf7 input, .wf-active .site-content div.wpcf7 p, .wf-active .site-content div.wpcf7 textarea, .wf-active .widget_blog_subscription #subscribe-blog input#subscribe-field, .wf-active .widget_blog_subscription #subscribe-submit input[type="submit"], .wf-active a.standard-btn, .wf-active input, .wf-active textarea{font-family:"ff-meta-web-pro-1","ff-meta-web-pro-2",sans-serif}.wf-active code, .wf-active kbd, .wf-active pre, .wf-active tt, .wf-active var{font-family:"ff-meta-web-pro-1","ff-meta-web-pro-2",sans-serif}.wf-active input#submit, .wf-active input[type="button"], .wf-active input[type="submit"]{font-family:"ff-meta-web-pro-1","ff-meta-web-pro-2",sans-serif}.wf-active .widget_search input.search-field{font-family:"ff-meta-web-pro-1","ff-meta-web-pro-2",sans-serif}.wf-active .widget_blog_subscription #subscribe-blog p input#subscribe-field{font-family:"ff-meta-web-pro-1","ff-meta-web-pro-2",sans-serif}.wf-active h1.site-title, .wf-active p.site-title, .wf-active .featured-slider .entry-header h2.entry-title, .wf-active .blog-wrap h3.blog-title, .wf-active .entry-header h2.entry-title, .wf-active .front-section-title, .wf-active .social-front-title, .wf-active .title-footer, .wf-active .footer-widgetarea h3.footer-widget-title, .wf-active .widget h2.widget-title{font-family:"Roboto Slab",serif;font-style:normal;font-weight:700}.wf-active #secondary h2.widget-title, .wf-active #sidebar-page h2.widget-title, .wf-active h1, .wf-active h2, .wf-active h3, .wf-active h4, .wf-active h5, .wf-active h6, .wf-active .entry-content h1, .wf-active .entry-content h2, .wf-active .entry-content h3, .wf-active .entry-content h4, .wf-active .entry-content h5, .wf-active .entry-content h6, .wf-active div.sharedaddy h3.sd-title{font-family:"Roboto Slab",serif;font-style:normal;font-weight:700}.wf-active h1.site-title, .wf-active p.site-title{font-style:normal;font-weight:700}.wf-active #front-section-four .entry-header h2.entry-title, .wf-active #front-section-three h3.front-section-title, .wf-active .archive-header h1.archive-title, .wf-active .blog #primary .hentry.has-post-thumbnail:nth-child(4n+1) .entry-header h2.entry-title, .wf-active .blog-wrap h3.blog-title, .wf-active .featured-slider .entry-header h2.entry-title, .wf-active .front-section-title, .wf-active .page h1.entry-title, .wf-active .recommended-posts-wrap #jp-relatedposts h3.jp-relatedposts-headline, .wf-active .section-one-column-one .entry-header h2.entry-title, .wf-active .section-three-column-one .entry-header h2.entry-title, .wf-active .single-post .entry-header h1.entry-title, .wf-active .social-front-title{font-style:normal;font-weight:700}.wf-active #secondary h2.widget-title, .wf-active #sidebar-page h2.widget-title{font-style:normal;font-weight:700}.wf-active .entry-header h2.entry-title{font-style:normal;font-weight:700}.wf-active #comments #respond h3#reply-title, .wf-active #comments h2.comments-title, .wf-active .authorbox h3.author-title, .wf-active .footer-widgetarea h3.footer-widget-title, .wf-active .widget_blog_subscription h2.widget-title{font-style:normal;font-weight:700}.wf-active div.sharedaddy h3.sd-title{font-style:normal;font-weight:700}.wf-active .entry-content h1{font-style:normal;font-weight:700}.wf-active .entry-content h2{font-style:normal;font-weight:700}.wf-active .entry-content h3{font-style:normal;font-weight:700}.wf-active .entry-content h4{font-style:normal;font-weight:700}.wf-active .entry-content h5{font-style:normal;font-weight:700}.wf-active .entry-content h6{font-style:normal;font-weight:700}.wf-active #comments h2.comments-title, .wf-active #desktop-navigation ul li a, .wf-active #overlay-nav ul li a, .wf-active .authorbox h3.author-title, .wf-active .page-links, .wf-active h1, .wf-active h2, .wf-active h3, .wf-active h4, .wf-active h5, .wf-active h6{font-weight:700;font-style:normal}.wf-active h1.site-title, .wf-active p.site-title{font-weight:700;font-style:normal}.wf-active .footer-widgetarea h3.footer-widget-title{font-weight:700;font-style:normal}.wf-active .authorbox h3.author-title span{font-style:normal;font-weight:700}.wf-active #comments h2.comments-title, .wf-active #comments #respond h3#reply-title{font-weight:700;font-style:normal}.wf-active .title-footer{font-weight:700;font-style:normal}.wf-active div.sharedaddy h3.sd-title{font-weight:700;font-style:normal}.wf-active .recommended-posts-wrap #jp-relatedposts h3.jp-relatedposts-headline{font-weight:700;font-style:normal}.wf-active .recommended-posts-wrap #jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title{font-style:normal;font-weight:700}@media screen and (min-width: 37.500em){.wf-active .page h1.entry-title, .wf-active .single-attachment .entry-header h1.entry-title, .wf-active .single-post .entry-header h1.entry-title{font-style:normal;font-weight:700}}@media screen and (min-width: 37.500em){.wf-active .entry-content h1{font-style:normal;font-weight:700}}@media screen and (min-width: 37.500em){.wf-active #front-section-four .entry-header h2.entry-title, .wf-active .archive-header h1.archive-title, .wf-active .blog #primary .hentry.has-post-thumbnail:nth-child(4n+1) .entry-header h2.entry-title, .wf-active .blog-wrap h3.blog-title, .wf-active .featured-slider .entry-header h2.entry-title, .wf-active .front-section-title, .wf-active .recommended-posts-wrap #jp-relatedposts h3.jp-relatedposts-headline, .wf-active .section-one-column-one .entry-header h2.entry-title, .wf-active .section-three-column-one .entry-header h2.entry-title, .wf-active .social-front-title{font-style:normal;font-weight:700}}@media screen and (min-width: 37.500em){.wf-active .entry-content h2{font-style:normal;font-weight:700}}@media screen and (min-width: 37.500em){.wf-active .entry-content h3, .wf-active .entry-header h2.entry-title{font-style:normal;font-weight:700}}@media screen and (min-width: 37.500em){.wf-active .entry-content h4{font-style:normal;font-weight:700}}@media screen and (min-width: 37.500em){.wf-active .entry-content h5, .wf-active .entry-content h6{font-style:normal;font-weight:700}}@media screen and (min-width: 37.500em){.wf-active #front-section-fourcolumn .type-post .entry-header h2.entry-title, .wf-active .section-one-column-two .type-post:nth-of-type(n+2) .entry-header h2.entry-title, .wf-active .section-sixcolumn-postwrap .type-post .entry-header h2.entry-title, .wf-active .section-three-column-two .type-post .entry-header h2.entry-title, .wf-active .section-two-column-two .type-post .entry-header h2.entry-title{font-style:normal;font-weight:700}}@media screen and (min-width: 37.500em){.wf-active .page div.sharedaddy h3.sd-title, .wf-active .page div.sharedaddy h3.sd-title, .wf-active .single-post div.sharedaddy h3.sd-title{font-style:normal;font-weight:700}}@media screen and (min-width: 37.500em){.wf-active .entry-header h2.entry-title{font-style:normal;font-weight:700}}@media screen and (min-width: 37.500em){.wf-active #front-section-twocolumn .entry-header h2.entry-title, .wf-active p.text-big{font-style:normal;font-weight:700}}@media screen and (min-width: 37.500em){.wf-active p.site-description{font-style:normal;font-weight:700}}@media screen and (min-width: 37.500em){.wf-active h1.site-title, .wf-active p.site-title{font-style:normal;font-weight:700}}@media screen and (min-width: 37.500em){.wf-active #front-section-four .entry-header h2.entry-title, .wf-active .blog #primary .hentry.has-post-thumbnail:nth-child(4n+1) .entry-header h2.entry-title, .wf-active .featured-slider .entry-header h2.entry-title, .wf-active .section-one-column-one .entry-header h2.entry-title, .wf-active .section-three-column-one .entry-header h2.entry-title{font-style:normal;font-weight:700}}@media screen and (min-width: 37.500em){.wf-active #front-section-fourcolumn .type-post .entry-header h2.entry-title, .wf-active .recommended-posts-wrap #jp-relatedposts .jp-relatedposts-items-visual h4.jp-relatedposts-post-title{font-style:normal;font-weight:700}}</style>
+<!-- Jetpack Site Verification Tags -->
+
+<script>window._wca = window._wca || [];</script>
+
+<!-- All In One SEO Pack 3.4.3[,] -->
+<script type="application/ld+json" class="aioseop-schema">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://syncedreview.com/#organization","url":"https://syncedreview.com/","name":"Synced","sameAs":[]},{"@type":"WebSite","@id":"https://syncedreview.com/#website","url":"https://syncedreview.com/","name":"Synced","publisher":{"@id":"https://syncedreview.com/#organization"}},{"@type":"WebPage","@id":"https://syncedreview.com/2019/10/15/openai-robot-hand-today-rubiks-cube-tomorrow-the-real-world/#webpage","url":"https://syncedreview.com/2019/10/15/openai-robot-hand-today-rubiks-cube-tomorrow-the-real-world/","inLanguage":"en-US","name":"OpenAI Robot Hand: Today Rubik's Cube, Tomorrow the Real World?","isPartOf":{"@id":"https://syncedreview.com/#website"},"breadcrumb":{"@id":"https://syncedreview.com/2019/10/15/openai-robot-hand-today-rubiks-cube-tomorrow-the-real-world/#breadcrumblist"},"description":"We’ve lost the brain race, but humans still have unmatched dexterity, right? Wrong. OpenAI’s humanlike five-fingered gripper Dactyl just single-handedly solved a Rubik's cube.","image":{"@type":"ImageObject","@id":"https://syncedreview.com/2019/10/15/openai-robot-hand-today-rubiks-cube-tomorrow-the-real-world/#primaryimage","url":"https://i0.wp.com/syncedreview.com/wp-content/uploads/2019/10/openai-robotics-hand-with-cube-solved-crop-2000w.jpg?fit=1600%2C1066&ssl=1","width":1600,"height":1066},"primaryImageOfPage":{"@id":"https://syncedreview.com/2019/10/15/openai-robot-hand-today-rubiks-cube-tomorrow-the-real-world/#primaryimage"},"datePublished":"2019-10-15T17:46:53-04:00","dateModified":"2019-10-15T19:12:20-04:00"},{"@type":"Article","@id":"https://syncedreview.com/2019/10/15/openai-robot-hand-today-rubiks-cube-tomorrow-the-real-world/#article","isPartOf":{"@id":"https://syncedreview.com/2019/10/15/openai-robot-hand-today-rubiks-cube-tomorrow-the-real-world/#webpage"},"author":{"@id":"https://syncedreview.com/author/syncedreview/#author"},"headline":"OpenAI Robot Hand: Today Rubik&#8217;s Cube, Tomorrow the Real World?","datePublished":"2019-10-15T17:46:53-04:00","dateModified":"2019-10-15T19:12:20-04:00","commentCount":0,"mainEntityOfPage":{"@id":"https://syncedreview.com/2019/10/15/openai-robot-hand-today-rubiks-cube-tomorrow-the-real-world/#webpage"},"publisher":{"@id":"https://syncedreview.com/#organization"},"articleSection":"AI, Technology, Artificial Intelligence_, OpenAI, robotics, Robots","image":{"@type":"ImageObject","@id":"https://syncedreview.com/2019/10/15/openai-robot-hand-today-rubiks-cube-tomorrow-the-real-world/#primaryimage","url":"https://i0.wp.com/syncedreview.com/wp-content/uploads/2019/10/openai-robotics-hand-with-cube-solved-crop-2000w.jpg?fit=1600%2C1066&ssl=1","width":1600,"height":1066}},{"@type":"Person","@id":"https://syncedreview.com/author/syncedreview/#author","name":"Synced","sameAs":[],"image":{"@type":"ImageObject","@id":"https://syncedreview.com/#personlogo","url":"https://secure.gravatar.com/avatar/329f7fba8fe5bbe0be6e58f416a00e26?s=96&d=identicon&r=g","width":96,"height":96,"caption":"Synced"}},{"@type":"BreadcrumbList","@id":"https://syncedreview.com/2019/10/15/openai-robot-hand-today-rubiks-cube-tomorrow-the-real-world/#breadcrumblist","itemListElement":[{"@type":"ListItem","position":1,"item":{"@type":"WebPage","@id":"https://syncedreview.com/","url":"https://syncedreview.com/","name":"Synced"}},{"@type":"ListItem","position":2,"item":{"@type":"WebPage","@id":"https://syncedreview.com/2019/10/15/openai-robot-hand-today-rubiks-cube-tomorrow-the-real-world/","url":"https://syncedreview.com/2019/10/15/openai-robot-hand-today-rubiks-cube-tomorrow-the-real-world/","name":"OpenAI Robot Hand: Today Rubik's Cube, Tomorrow the Real World?"}}]}]}</script>
+<link rel="canonical" href="https://syncedreview.com/2019/10/15/openai-robot-hand-today-rubiks-cube-tomorrow-the-real-world/" />
+<!-- All In One SEO Pack -->
+
+	<!-- This site is optimized with the Yoast SEO plugin v14.2 - https://yoast.com/wordpress/plugins/seo/ -->
+	<title>OpenAI Robot Hand: Today Rubik&#039;s Cube, Tomorrow the Real World? - Synced</title>
+	<meta name="robots" content="index, follow" />
+	<meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<link rel="canonical" href="https://syncedreview.com/2019/10/15/openai-robot-hand-today-rubiks-cube-tomorrow-the-real-world/" />
+	<meta property="og:locale" content="en_US" />
+	<meta property="og:type" content="article" />
+	<meta property="og:title" content="OpenAI Robot Hand: Today Rubik&#039;s Cube, Tomorrow the Real World? - Synced" />
+	<meta property="og:description" content="We’ve lost the brain race, but humans still have unmatched dexterity, right? Wrong. OpenAI’s humanlike five-fingered gripper Dactyl just single-handedly solved a Rubik&#039;s cube." />
+	<meta property="og:url" content="https://syncedreview.com/2019/10/15/openai-robot-hand-today-rubiks-cube-tomorrow-the-real-world/" />
+	<meta property="og:site_name" content="Synced" />
+	<meta property="article:published_time" content="2019-10-15T17:46:53+00:00" />
+	<meta property="article:modified_time" content="2019-10-15T19:12:20+00:00" />
+	<meta property="og:image" content="https://i0.wp.com/syncedreview.com/wp-content/uploads/2019/10/openai-robotics-hand-with-cube-solved-crop-2000w.jpg?fit=1600%2C1066&#038;ssl=1" />
+	<meta property="og:image:width" content="1600" />
+	<meta property="og:image:height" content="1066" />
+	<meta name="twitter:card" content="summary_large_image" />
+	<script type="application/ld+json" class="yoast-schema-graph">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://syncedreview.com/#website","url":"https://syncedreview.com/","name":"Synced","description":"AI Technology &amp; Industry Review","potentialAction":[{"@type":"SearchAction","target":"https://syncedreview.com/?s={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"en-US"},{"@type":"ImageObject","@id":"https://syncedreview.com/2019/10/15/openai-robot-hand-today-rubiks-cube-tomorrow-the-real-world/#primaryimage","inLanguage":"en-US","url":"https://i0.wp.com/syncedreview.com/wp-content/uploads/2019/10/openai-robotics-hand-with-cube-solved-crop-2000w.jpg?fit=1600%2C1066&ssl=1","width":1600,"height":1066},{"@type":"WebPage","@id":"https://syncedreview.com/2019/10/15/openai-robot-hand-today-rubiks-cube-tomorrow-the-real-world/#webpage","url":"https://syncedreview.com/2019/10/15/openai-robot-hand-today-rubiks-cube-tomorrow-the-real-world/","name":"OpenAI Robot Hand: Today Rubik's Cube, Tomorrow the Real World? - Synced","isPartOf":{"@id":"https://syncedreview.com/#website"},"primaryImageOfPage":{"@id":"https://syncedreview.com/2019/10/15/openai-robot-hand-today-rubiks-cube-tomorrow-the-real-world/#primaryimage"},"datePublished":"2019-10-15T17:46:53+00:00","dateModified":"2019-10-15T19:12:20+00:00","author":{"@id":"https://syncedreview.com/#/schema/person/cb2784cfc0ace3d77e4c17aaa6937406"},"inLanguage":"en-US","potentialAction":[{"@type":"ReadAction","target":["https://syncedreview.com/2019/10/15/openai-robot-hand-today-rubiks-cube-tomorrow-the-real-world/"]}]},{"@type":["Person"],"@id":"https://syncedreview.com/#/schema/person/cb2784cfc0ace3d77e4c17aaa6937406","name":"Synced","image":{"@type":"ImageObject","@id":"https://syncedreview.com/#personlogo","inLanguage":"en-US","url":"https://secure.gravatar.com/avatar/329f7fba8fe5bbe0be6e58f416a00e26?s=96&d=identicon&r=g","caption":"Synced"},"description":"Machine Intelligence | Technology &amp; Industry | Information &amp; Analysis"}]}</script>
+	<!-- / Yoast SEO plugin. -->
+
+
+<link rel='dns-prefetch' href='//stats.wp.com' />
+<link rel='dns-prefetch' href='//secure.gravatar.com' />
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link rel='dns-prefetch' href='//s.w.org' />
+<link rel="alternate" type="application/rss+xml" title="Synced &raquo; Feed" href="https://syncedreview.com/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Synced &raquo; Comments Feed" href="https://syncedreview.com/comments/feed/" />
+<link rel="alternate" type="application/rss+xml" title="Synced &raquo; OpenAI Robot Hand: Today Rubik&#8217;s Cube, Tomorrow the Real World? Comments Feed" href="https://syncedreview.com/2019/10/15/openai-robot-hand-today-rubiks-cube-tomorrow-the-real-world/feed/" />
+<!-- This site uses the Google Analytics by MonsterInsights plugin v7.10.4 - Using Analytics tracking - https://www.monsterinsights.com/ -->
+<script type="text/javascript" data-cfasync="false">
+	var mi_version         = '7.10.4';
+	var mi_track_user      = true;
+	var mi_no_track_reason = '';
+	
+	var disableStr = 'ga-disable-UA-128291670-1';
+
+	/* Function to detect opted out users */
+	function __gaTrackerIsOptedOut() {
+		return document.cookie.indexOf(disableStr + '=true') > -1;
+	}
+
+	/* Disable tracking if the opt-out cookie exists. */
+	if ( __gaTrackerIsOptedOut() ) {
+		window[disableStr] = true;
+	}
+
+	/* Opt-out function */
+	function __gaTrackerOptout() {
+	  document.cookie = disableStr + '=true; expires=Thu, 31 Dec 2099 23:59:59 UTC; path=/';
+	  window[disableStr] = true;
+	}
+	
+	if ( mi_track_user ) {
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','//www.google-analytics.com/analytics.js','__gaTracker');
+
+		__gaTracker('create', 'UA-128291670-1', 'auto');
+		__gaTracker('set', 'forceSSL', true);
+		__gaTracker('require', 'displayfeatures');
+		__gaTracker('send','pageview');
+	} else {
+		console.log( "" );
+		(function() {
+			/* https://developers.google.com/analytics/devguides/collection/analyticsjs/ */
+			var noopfn = function() {
+				return null;
+			};
+			var noopnullfn = function() {
+				return null;
+			};
+			var Tracker = function() {
+				return null;
+			};
+			var p = Tracker.prototype;
+			p.get = noopfn;
+			p.set = noopfn;
+			p.send = noopfn;
+			var __gaTracker = function() {
+				var len = arguments.length;
+				if ( len === 0 ) {
+					return;
+				}
+				var f = arguments[len-1];
+				if ( typeof f !== 'object' || f === null || typeof f.hitCallback !== 'function' ) {
+					console.log( 'Not running function __gaTracker(' + arguments[0] + " ....) because you are not being tracked. " + mi_no_track_reason );
+					return;
+				}
+				try {
+					f.hitCallback();
+				} catch (ex) {
+
+				}
+			};
+			__gaTracker.create = function() {
+				return new Tracker();
+			};
+			__gaTracker.getByName = noopnullfn;
+			__gaTracker.getAll = function() {
+				return [];
+			};
+			__gaTracker.remove = noopfn;
+			window['__gaTracker'] = __gaTracker;
+					})();
+		}
+</script>
+<!-- / Google Analytics by MonsterInsights -->
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/12.0.0-1\/svg\/","svgExt":".svg","source":{"concatemoji":"https:\/\/syncedreview.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.4.1"}};
+			/*! This file is auto-generated */
+			!function(e,a,t){var r,n,o,i,p=a.createElement("canvas"),s=p.getContext&&p.getContext("2d");function c(e,t){var a=String.fromCharCode;s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,e),0,0);var r=p.toDataURL();return s.clearRect(0,0,p.width,p.height),s.fillText(a.apply(this,t),0,0),r===p.toDataURL()}function l(e){if(!s||!s.fillText)return!1;switch(s.textBaseline="top",s.font="600 32px Arial",e){case"flag":return!c([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])&&(!c([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!c([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]));case"emoji":return!c([55357,56424,55356,57342,8205,55358,56605,8205,55357,56424,55356,57340],[55357,56424,55356,57342,8203,55358,56605,8203,55357,56424,55356,57340])}return!1}function d(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(i=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},o=0;o<i.length;o++)t.supports[i[o]]=l(i[o]),t.supports.everything=t.supports.everything&&t.supports[i[o]],"flag"!==i[o]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[i[o]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(r=t.source||{}).concatemoji?d(r.concatemoji):r.wpemoji&&r.twemoji&&(d(r.twemoji),d(r.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+	<link rel='stylesheet' id='gtranslate-style-css'  href='https://syncedreview.com/wp-content/plugins/gtranslate/gtranslate-style24.css?ver=5.4.1' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-block-library-css'  href='https://c0.wp.com/c/5.4.1/wp-includes/css/dist/block-library/style.min.css' type='text/css' media='all' />
+<style id='wp-block-library-inline-css' type='text/css'>
+.has-text-align-justify{text-align:justify;}
+</style>
+<link rel='stylesheet' id='wc-block-style-css'  href='https://c0.wp.com/p/woocommerce/4.1.1/packages/woocommerce-blocks/build/style.css' type='text/css' media='all' />
+<link rel='stylesheet' id='wpcom-text-widget-styles-css'  href='https://syncedreview.com/wp-content/mu-plugins/wpcomsh/vendor/automattic/text-media-widget-styles/css/widget-text.css?ver=20170607' type='text/css' media='all' />
+<link rel='stylesheet' id='woocommerce-layout-css'  href='https://c0.wp.com/p/woocommerce/4.1.1/assets/css/woocommerce-layout.css' type='text/css' media='all' />
+<style id='woocommerce-layout-inline-css' type='text/css'>
+
+	.infinite-scroll .woocommerce-pagination {
+		display: none;
+	}
+</style>
+<link rel='stylesheet' id='woocommerce-smallscreen-css'  href='https://c0.wp.com/p/woocommerce/4.1.1/assets/css/woocommerce-smallscreen.css' type='text/css' media='only screen and (max-width: 768px)' />
+<link rel='stylesheet' id='woocommerce-general-css'  href='https://c0.wp.com/p/woocommerce/4.1.1/assets/css/woocommerce.css' type='text/css' media='all' />
+<style id='woocommerce-inline-inline-css' type='text/css'>
+.woocommerce form .form-row .required { visibility: visible; }
+</style>
+<link rel='stylesheet' id='yop-public-css'  href='https://syncedreview.com/wp-content/plugins/yop-poll/public/assets/css/yop-poll-public-6.1.6.css?ver=5.4.1' type='text/css' media='all' />
+<link crossorigin="anonymous" rel='stylesheet' id='nikau-fonts-css'  href='https://fonts.googleapis.com/css?family=Noticia+Text%3A400%2C400italic%2C700%2C700italic%7CKanit%3A400%2C500%2C600%2C700&#038;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='nikau-style-css'  href='https://syncedreview.com/wp-content/themes/nikau/style.css?ver=20160507' type='text/css' media='all' />
+<link rel='stylesheet' id='genericons-css'  href='https://c0.wp.com/p/jetpack/8.5/_inc/genericons/genericons/genericons.css' type='text/css' media='all' />
+<link rel='stylesheet' id='slick-style-css'  href='https://syncedreview.com/wp-content/themes/nikau/js/slick/slick.css?ver=5.4.1' type='text/css' media='all' />
+<link rel='stylesheet' id='wp-calypso-bridge-masterbar-css'  href='https://syncedreview.com/wp-content/mu-plugins/wpcomsh/vendor/automattic/wc-calypso-bridge/store-on-wpcom/assets/css/masterbar.css?ver=1.1.3' type='text/css' media='all' />
+<link rel='stylesheet' id='newsletter-css'  href='https://syncedreview.com/wp-content/plugins/newsletter/style.css?ver=6.6.9' type='text/css' media='all' />
+<link rel='stylesheet' id='social-logos-css'  href='https://c0.wp.com/p/jetpack/8.5/_inc/social-logos/social-logos.min.css' type='text/css' media='all' />
+<link rel='stylesheet' id='jetpack_css-css'  href='https://c0.wp.com/p/jetpack/8.5/css/jetpack.css' type='text/css' media='all' />
+<script type='text/javascript' src='https://c0.wp.com/c/5.4.1/wp-includes/js/jquery/jquery.js'></script>
+<script type='text/javascript' src='https://c0.wp.com/c/5.4.1/wp-includes/js/jquery/jquery-migrate.min.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var related_posts_js_options = {"post_heading":"h4"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://c0.wp.com/p/jetpack/8.5/_inc/build/related-posts/related-posts.min.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var monsterinsights_frontend = {"js_events_tracking":"true","download_extensions":"doc,pdf,ppt,zip,xls,docx,pptx,xlsx","inbound_paths":"[]","home_url":"https:\/\/syncedreview.com","hash_tracking":"false"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://syncedreview.com/wp-content/plugins/google-analytics-for-wordpress/assets/js/frontend.min.js?ver=7.10.4'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var objectL10n = {"yopPollParams":{"urlParams":{"ajax":"https:\/\/syncedreview.com\/wp-admin\/admin-ajax.php","wpLogin":"https:\/\/syncedreview.com\/wp-login.php?redirect_to=https%3A%2F%2Fsyncedreview.com%2Fwp-admin%2Fadmin-ajax.php%3Faction%3Dyop_poll_record_wordpress_vote"},"apiParams":{"reCaptcha":{"siteKey":""},"reCaptchaV2Invisible":{"siteKey":""}},"captchaParams":{"imgPath":"https:\/\/syncedreview.com\/wp-content\/plugins\/yop-poll\/public\/assets\/img\/","url":"https:\/\/syncedreview.com\/wp-content\/plugins\/yop-poll\/app.php","accessibilityAlt":"Sound icon","accessibilityTitle":"Accessibility option: listen to a question and answer it!","accessibilityDescription":"Type below the <strong>answer<\/strong> to what you hear. Numbers or words:","explanation":"Click or touch the <strong>ANSWER<\/strong>","refreshAlt":"Refresh\/reload icon","refreshTitle":"Refresh\/reload: get new images and accessibility option!"},"voteParams":{"invalidPoll":"Invalid Poll","noAnswersSelected":"No answer selected","minAnswersRequired":"At least {min_answers_allowed} answer(s) required","maxAnswersRequired":"A max of {max_answers_allowed} answer(s) accepted","noAnswerForOther":"No other answer entered","noValueForCustomField":"{custom_field_name} is required","consentNotChecked":"You must agree to our terms and conditions","noCaptchaSelected":"Captcha is required","thankYou":"Thank you for your vote"},"resultsParams":{"singleVote":"vote","multipleVotes":"votes","singleAnswer":"answer","multipleAnswers":"answers"}}};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://syncedreview.com/wp-content/plugins/yop-poll/public/assets/js/yop-poll-public-6.1.6.min.js?ver=5.4.1'></script>
+<script async type='text/javascript' src='https://stats.wp.com/s-202022.js'></script>
+<script type='text/javascript' src='https://syncedreview.com/wp-content/themes/nikau/js/slick/slick.js?ver=1.6.0'></script>
+<script type='text/javascript' src='https://syncedreview.com/wp-content/themes/nikau/js/jquery.viewportchecker.js?ver=1.8.7'></script>
+<script type='text/javascript' src='https://syncedreview.com/wp-content/themes/nikau/js/sticky-kit.js?ver=1.1.3'></script>
+<link rel='https://api.w.org/' href='https://syncedreview.com/wp-json/' />
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="https://syncedreview.com/xmlrpc.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="https://syncedreview.com/wp-includes/wlwmanifest.xml" /> 
+
+<link rel='shortlink' href='https://wp.me/p8bBIr-4xx' />
+<link rel="alternate" type="application/json+oembed" href="https://syncedreview.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fsyncedreview.com%2F2019%2F10%2F15%2Fopenai-robot-hand-today-rubiks-cube-tomorrow-the-real-world%2F" />
+<link rel="alternate" type="text/xml+oembed" href="https://syncedreview.com/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fsyncedreview.com%2F2019%2F10%2F15%2Fopenai-robot-hand-today-rubiks-cube-tomorrow-the-real-world%2F&#038;format=xml" />
+
+<link rel='dns-prefetch' href='//widgets.wp.com'/>
+<link rel='dns-prefetch' href='//s0.wp.com'/>
+<link rel='dns-prefetch' href='//0.gravatar.com'/>
+<link rel='dns-prefetch' href='//1.gravatar.com'/>
+<link rel='dns-prefetch' href='//2.gravatar.com'/>
+<link rel='dns-prefetch' href='//i0.wp.com'/>
+<link rel='dns-prefetch' href='//i1.wp.com'/>
+<link rel='dns-prefetch' href='//i2.wp.com'/>
+<link rel='dns-prefetch' href='//c0.wp.com'/>
+<style type='text/css'>img#wpstats{display:none}</style>	<style type="text/css">
+					#front-section-threecolumn .entry-summary {display: block;}
+							#front-section-fourcolumn .entry-summary {display: block;}
+			</style>
+		<noscript><style>.woocommerce-product-gallery{ opacity: 1 !important; }</style></noscript>
+	<style type="text/css" id="custom-background-css">
+body.custom-background { background-color: #ffffff; }
+</style>
+	<link rel="amphtml" href="https://syncedreview.com/2019/10/15/openai-robot-hand-today-rubiks-cube-tomorrow-the-real-world/amp/"><style type="text/css" id="custom-colors-css">pre{color:#939393}body,input,textarea,input[type="button"],input[type="submit"],input#submit,img.img-border-thin,#site-branding,.close-btn-wrap,.format-video .entry-thumbnail a:before,.sticky-header{background-color:#fff}pre,#front-section-three,.widget-area .widget_blog_subscription,.inner-offcanvas-wrap{background-color:#f2f2f2}.mobile-search{background-color:#e0e0e0}#colophon,input[type="submit"]:hover,input#submit:hover,#primary #infinite-handle span:hover,#front-section-three a.all-posts-link:hover,.desktop-search input[type="submit"]:hover,.widget_search input[type="submit"]:hover,.post-password-form input[type="submit"]:hover .footer-feature-btn:hover,#offcanvas-widgets-open:hover,.offcanvas-widgets-show #offcanvas-widgets-open,#secondary .widget_blog_subscription input[type="submit"],#colophon a,.blog #primary .hentry.has-post-thumbnail:nth-child(4n+1) .entry-cats a,.section-one-column-one .entry-cats a,.section-three-column-one .entry-cats a,#front-section-four .entry-cats a,#front-section-four .entry-header h2.entry-title a,#front-section-four .entry-meta,#front-section-four .entry-meta a,.single-post .entry-cats a,#primary #infinite-handle span:hover button,.featured-slider .entry-cats a,.section-one-column-one .entry-cats a,.section-three-column-one .entry-cats a,#front-section-four .entry-cats a,.single-post .entry-cats a,.single-post .sd-social-icon .sd-content ul li a.sd-button:hover,.page .sd-social-icon .sd-content ul li a.sd-button:hover,a.standard-btn,.post .entry-content a.standard-btn,.page .entry-content a.standard-btn,.post .entry-content a.standard-btn:hover,.page .entry-content a.standard-btn:hover,.desktop-search input[type="submit"],#desktop-navigation ul ul.sub-menu,#desktop-navigation ul ul.children,#desktop-navigation .sub-menu li a,#desktop-navigation .children li a,#colophon #site-info,#colophon #site-info a,#colophon .jetpack-social-navigation a,#colophon .widget,#colophon .widget a,#colophon .widget a:hover,#colophon #site-info a:hover,#colophon .widget h3,#colophon .jetpack-social-navigation a:hover,#secondary .widget_blog_subscription p,#sidebar-offcanvas .widget_blog_subscription p,#desktop-navigation ul ul li.menu-item-has-children a:hover,#desktop-navigation ul ul li.menu-item-has-children a:focus,#secondary .widget_blog_subscription input[type="submit"],#secondary .widget_blog_subscription input[type="submit"]:hover,#secondary .widget_blog_subscription input[type="submit"]:focus,.footer-widgetarea .widget_blog_subscription input[type="submit"],.footer-widgetarea .widget_blog_subscription input[type="submit"]:hover,.footer-widgetarea .widget_blog_subscription input[type="submit"]:focus,#sidebar-offcanvas .widget_blog_subscription input[type="submit"],#sidebar-offcanvas .widget_blog_subscription input[type="submit"]:hover,#sidebar-offcanvas .widget_blog_subscription input[type="submit"]:focus,.footer-widgetarea .widget_search input[type="submit"],.footer-widgetarea .widget_search input[type="submit"]:hover,.footer-widgetarea .widget_search input[type="submit"]:focus{color:#fff}.desktop-search input[type="submit"]{color:#fff}.desktop-search input.search-field,.desktop-search input[type="submit"]{border-color:#fff}body,.format-video .entry-thumbnail a:before,#desktop-navigation ul ul.sub-menu:before,#desktop-navigation ul ul.children:before{color:#4c4c4c}.single-post .entry-header .intro p,.entry-meta,.entry-cats,.entry-summary,.front-section-title,.social-front-title,.widget_blog_subscription #subscribe-blog p,.section-about-column-one p,a,.entry-header h2.entry-title,.entry-header h2.entry-title a,#secondary h2.widget-title,#sidebar-page h2.widget-title,.entry-meta a,.entry-cats a,a.more-link:hover::before,input,textarea,.blog .entry-cats a:nth-child(n+2):before,.search-results .entry-cats a:nth-child(n+2):before,.archive .entry-cats a:nth-child(n+2):before,.pagination,.pagination a,.widget h2.widget-title,#primary #infinite-handle span{color:#4c4c4c}::-webkit-input-placeholder{color:#4c4c4c}:-moz-placeholder{color:#4c4c4c}::-moz-placeholder{color:#4c4c4c}:-ms-input-placeholder{color:#4c4c4c}#comments .comment-reply a,#respond a#cancel-comment-reply-link,#comments #respond p.comment-notes a,#comments #respond p.logged-in-as a,#nav-comments a,#comments .comment-meta,#comments .comment-meta a,.single-post .entry-tags a,p.wp-caption-text,.contact-form label span,.gallery .gallery-item .gallery-caption,.pagination .nav-links .current{color:#4c4c4c}#colophon,#desktop-navigation ul ul.sub-menu,#desktop-navigation ul ul.children{background-color:#4c4c4c}a.standard-btn{background-color:#4c4c4c}.widget_search input[type="submit"],.post-password-form input[type="submit"],.front-section-title,.social-front-title,.front-section .type-post,#front-section-three h3.front-section-title:before,.section-about-column-one .front-section-title,.section-about-column-two .jetpack-social-navigation ul,.section-about-column-two .jetpack-social-navigation ul li,.blog-wrap h3.blog-title,.archive-header h1.archive-title,#primary .hentry,.single-post .hentry .entry-meta,.single-attachment .entry-meta,.single-post .authorbox,#comments h2.comments-title,.page-template-default #primary .hentry,.page-fullwidth #primary .hentry,.page-template-no-sidebar #primary .hentry,.error404 #primary .page,.page h1.entry-title,.widget-area .widget,.recommended-posts-wrap #jp-relatedposts h3.jp-relatedposts-headline,.recommended-posts-wrap #jp-relatedposts .jp-relatedposts-items-visual .jp-relatedposts-post,.widget-area .widget_blog_subscription,#overlay-nav,#overlay-nav ul li,#overlay-nav ul ul.sub-menu,#overlay-nav ul ul.children{border-color:#4c4c4c}#desktop-navigation ul li.menu-item-has-children a:after,#desktop-navigation ul li.page_item_has_children a:after{border-top-color:#4c4c4c}abbr,acronym,.single-post .entry-content blockquote,.page .entry-content blockquote,textarea:focus,textarea:active,input:focus,input:active,input[type="button"],input[type="submit"],input#submit,#offcanvas-widgets-open,#front-section-three a.all-posts-link,.pagination,.single-post .post-navigation a,.single-attachment .post-navigation a,#primary #infinite-handle span{border-color:#4c4c4c}table,table td,table th,#site-branding,#overlay-nav ul li,.inner-offcanvas-wrap .jetpack-social-navigation,.close-btn-wrap,.mobile-search,.slider-on.slider-boxed #masthead,.headerimg-on.header-boxed #masthead,#masthead,.desktop-search,input,textarea{border-color:#4c4c4c}.entry-content a:hover,.comment-text a:hover,.author-bio a:hover{color:#dc1327}.entry-content a,.comment-text a,#desktop-navigation ul li a:hover,.front-section a.all-posts-link:hover,#overlay-close:hover,.widget-area .widget ul li a:hover,#sidebar-offcanvas .widget a:hover,.textwidget a:hover,#overlay-nav a:hover,.author-links a:hover,.single-post .post-navigation a:hover,.single-attachment .post-navigation a:hover,.author-bio a,.single-post .hentry .entry-meta a:hover,.entry-header a:hover,.entry-header h2.entry-title a:hover,.blog .entry-meta a:hover,a.more-link:hover,.pagination .nav-links a:hover,.widget_blog_subscription input[type="submit"]{color:#dc1327}.featured-slider button.slick-arrow:hover::after{color:#eb3144}.blog #primary .hentry.has-post-thumbnail:nth-child(4n+1) .entry-cats a:hover,.featured-slider .entry-cats a:hover,.section-one-column-one .entry-cats a:hover,.section-three-column-one .entry-cats a:hover,#front-section-four .entry-cats a:hover,.single-post .entry-cats a:hover,.footer-feature-btn:hover,#secondary .widget_blog_subscription input[type="submit"]:hover,input[type="submit"]:hover,input#submit:hover,#primary #infinite-handle span:hover,#front-section-three a.all-posts-link:hover,.desktop-search input[type="submit"]:hover,#offcanvas-widgets-open:hover,.offcanvas-widgets-show #offcanvas-widgets-open,#secondary .widget_blog_subscription input[type="submit"],.footer-widgetarea .widget_blog_subscription input[type="submit"],#sidebar-offcanvas .widget_blog_subscription input[type="submit"],.footer-widgetarea .widget_search input[type="submit"]{background-color:#dc1327}#secondary .widget_blog_subscription input[type="submit"]:hover,#secondary .widget_blog_subscription input[type="submit"]:focus,.footer-widgetarea .widget_blog_subscription input[type="submit"]:hover,.footer-widgetarea .widget_blog_subscription input[type="submit"]:focus,#sidebar-offcanvas .widget_blog_subscription input[type="submit"]:hover,#sidebar-offcanvas .widget_blog_subscription input[type="submit"]:focus,.footer-widgetarea .widget_search input[type="submit"]:hover,.footer-widgetarea .widget_search input[type="submit"]:focus{background-color:#87020f}.featured-slider .entry-cats a,.section-one-column-one .entry-cats a,.section-three-column-one .entry-cats a,#front-section-four .entry-cats a,.single-post .entry-cats a,.blog #primary .hentry.has-post-thumbnail:nth-child(4n+1) .entry-cats a,#desktop-navigation .sub-menu li a:hover,#desktop-navigation .children li a:hover,#secondary .widget_blog_subscription input[type="submit"]{background-color:#dc1327}input[type="submit"]:hover,input#submit:hover,#primary #infinite-handle span:hover,#front-section-three a.all-posts-link:hover,.desktop-search input[type="submit"]:hover,.widget_search input[type="submit"]:hover,.post-password-form input[type="submit"]:hover .footer-feature-btn:hover,#offcanvas-widgets-open:hover,.offcanvas-widgets-show #offcanvas-widgets-open,#secondary .widget_blog_subscription input[type="submit"]{border-color:#dc1327}.single-post .post-navigation a:hover,.single-attachment .post-navigation a:hover,.desktop-search input.search-field:active,.desktop-search input.search-field:focus{border-color:#dc1327}#desktop-navigation ul li.menu-item-has-children a:hover::after{border-top-color:#ea1f33}</style>
+<link rel="icon" href="https://i1.wp.com/syncedreview.com/wp-content/uploads/2017/08/cropped-screen-shot-2017-08-01-at-2-02-47-pm.png?fit=32%2C32&#038;ssl=1" sizes="32x32" />
+<link rel="icon" href="https://i1.wp.com/syncedreview.com/wp-content/uploads/2017/08/cropped-screen-shot-2017-08-01-at-2-02-47-pm.png?fit=192%2C192&#038;ssl=1" sizes="192x192" />
+<link rel="apple-touch-icon" href="https://i1.wp.com/syncedreview.com/wp-content/uploads/2017/08/cropped-screen-shot-2017-08-01-at-2-02-47-pm.png?fit=180%2C180&#038;ssl=1" />
+<meta name="msapplication-TileImage" content="https://i1.wp.com/syncedreview.com/wp-content/uploads/2017/08/cropped-screen-shot-2017-08-01-at-2-02-47-pm.png?fit=270%2C270&#038;ssl=1" />
+			<style type="text/css" id="wp-custom-css">
+				/*
+Welcome to Custom CSS!
+
+To learn how this works, see http://wp.me/PEmnE-Bt
+*/			</style>
+		</head>
+
+<body class="post-template-default single single-post postid-17455 single-format-standard custom-background theme-nikau woocommerce-no-js has-thumb custom-logo-on slider-boxed offcanvas-widgets-off big-thumb custom-colors">
+
+<header id="masthead" class="site-header cf" role="banner">
+	<div class="site-header-content">
+		<div id="site-branding">
+							<p class="site-title"><a href="https://syncedreview.com/" rel="home">Synced</a></p>
+			
+			
+							<p class="site-description">AI Technology &amp; Industry Review</p>
+			
+			<button id="overlay-open" class="overlay-open overlay-btn"><span>Menu</span></button>
+
+					<nav class="jetpack-social-navigation jetpack-social-navigation-genericons" role="navigation" aria-label="Social Links Menu">
+			<div class="menu-social-media-container"><ul id="menu-social-media" class="menu"><li id="menu-item-4643" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4643"><a href="https://twitter.com/Synced_Global"><span class="screen-reader-text">https://twitter.com/Synced_Global</span></a></li>
+<li id="menu-item-8405" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8405"><a href="https://www.facebook.com/SyncedGlobal/"><span class="screen-reader-text">FB</span></a></li>
+<li id="menu-item-8407" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8407"><a href="https://www.instagram.com/synced_review/"><span class="screen-reader-text">Ins</span></a></li>
+<li id="menu-item-8408" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8408"><a href="https://www.linkedin.com/company/10253612/"><span class="screen-reader-text">Linkedin</span></a></li>
+<li id="menu-item-8406" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8406"><a href="http://www.jiqizhixin.com/"><span class="screen-reader-text">Jiqizhixin</span></a></li>
+</ul></div>		</nav><!-- .jetpack-social-navigation -->
+				</div><!-- end #site-branding -->
+		<nav id="desktop-navigation" class="desktop-navigation cf" role="navigation">
+			<ul id="menu-primary" class="menu"><li id="menu-item-8412" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-8412"><a href="https://syncedreview.com/category/feature/">Feature</a>
+<ul class="sub-menu">
+	<li id="menu-item-8413" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8413"><a href="https://syncedreview.com/category/united-states/">United States</a></li>
+	<li id="menu-item-8414" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8414"><a href="https://syncedreview.com/category/china/">China</a></li>
+	<li id="menu-item-8415" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8415"><a href="https://syncedreview.com/category/canada/">Canada</a></li>
+	<li id="menu-item-8497" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8497"><a href="https://syncedreview.com/category/japan/">Japan</a></li>
+	<li id="menu-item-8417" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8417"><a href="https://syncedreview.com/category/switzerland/">Switzerland</a></li>
+	<li id="menu-item-8416" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8416"><a href="https://syncedreview.com/category/australia/">Australia</a></li>
+</ul>
+</li>
+<li id="menu-item-4677" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-4677"><a href="https://syncedreview.com/category/industry/">Industry</a>
+<ul class="sub-menu">
+	<li id="menu-item-8420" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8420"><a href="https://syncedreview.com/category/ai-globalization/">AI Globalization</a></li>
+	<li id="menu-item-8419" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8419"><a href="https://syncedreview.com/category/ai-bi-weekly/">AI Bi-Weekly</a></li>
+	<li id="menu-item-8426" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8426"><a href="https://syncedreview.com/category/interview/">Interview</a></li>
+	<li id="menu-item-8418" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8418"><a href="https://syncedreview.com/category/conference/">Conference</a></li>
+	<li id="menu-item-8421" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8421"><a href="https://syncedreview.com/category/emerging-company/">Emerging Company</a></li>
+	<li id="menu-item-8438" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8438"><a href="https://syncedreview.com/category/chinese-ai-talent-in-us/">Chinese AI Talent in US</a></li>
+</ul>
+</li>
+<li id="menu-item-4676" class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-4676"><a href="https://syncedreview.com/category/technology/">Technology</a></li>
+<li id="menu-item-8423" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-8423"><a href="https://syncedreview.com/category/community/">Community</a>
+<ul class="sub-menu">
+	<li id="menu-item-8424" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8424"><a href="https://syncedreview.com/category/gmis-2017/">GMIS 2017</a></li>
+	<li id="menu-item-8425" class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8425"><a href="https://syncedreview.com/category/event/">Event</a></li>
+</ul>
+</li>
+<li id="menu-item-4673" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-4673"><a href="https://syncedreview.com/about-us/">About Us</a>
+<ul class="sub-menu">
+	<li id="menu-item-8515" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8515"><a href="https://syncedreview.com/about-us/">About Us</a></li>
+	<li id="menu-item-4674" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4674"><a href="https://syncedreview.com/contact/">Contact Us</a></li>
+	<li id="menu-item-9149" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9149"><a href="https://syncedreview.com/career/">Career</a></li>
+</ul>
+</li>
+<li id="menu-item-12324" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12324"><a href="https://syncedreview.com/2018-500-company-ai-adaptivity-report/">Report</a></li>
+<li id="menu-item-18106" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-18106"><a href="https://docs.google.com/forms/d/e/1FAIpQLSdaYAtvk8dtP__l1wvOjEKkQNAfZQNjX-G4OoEWcVU8jFIMug/viewform?usp=sf_link">Contribute to Synced Review</a></li>
+</ul>		</nav><!-- .main-navigation -->
+		<button id="search-open" class="search-open search-btn"><span>Search</span></button>
+			<div class="desktop-search">
+				<form role="search" method="get" class="search-form" action="https://syncedreview.com/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" />
+				</label>
+				<input type="submit" class="search-submit" value="Search" />
+			</form>			</div><!-- end .desktop-search -->
+	</div><!-- .site-header-content -->
+
+	<div class="sticky-header hidden" aria-hidden="true">
+		<button id="overlay-open-sticky" class="overlay-open overlay-btn"><span>Menu</span></button>
+		<button id="search-open-sticky" class="search-open search-btn"><span>Search</span></button>
+
+					<p class="site-title"><a href="https://syncedreview.com/" rel="home">Synced</a></p>
+		
+				<nav class="jetpack-social-navigation jetpack-social-navigation-genericons" role="navigation" aria-label="Social Links Menu">
+			<div class="menu-social-media-container"><ul id="menu-social-media-1" class="menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4643"><a href="https://twitter.com/Synced_Global"><span class="screen-reader-text">https://twitter.com/Synced_Global</span></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8405"><a href="https://www.facebook.com/SyncedGlobal/"><span class="screen-reader-text">FB</span></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8407"><a href="https://www.instagram.com/synced_review/"><span class="screen-reader-text">Ins</span></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8408"><a href="https://www.linkedin.com/company/10253612/"><span class="screen-reader-text">Linkedin</span></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8406"><a href="http://www.jiqizhixin.com/"><span class="screen-reader-text">Jiqizhixin</span></a></li>
+</ul></div>		</nav><!-- .jetpack-social-navigation -->
+			</div><!-- end .sticky-header -->
+
+	<div class="inner-offcanvas-wrap">
+		<div class="close-btn-wrap">
+			<button id="overlay-close" class="overlay-btn"><span>Close</span></button>
+		</div><!-- end .close-btn-wrap -->
+		<div class="mobile-search">
+			<form role="search" method="get" class="search-form" action="https://syncedreview.com/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" />
+				</label>
+				<input type="submit" class="search-submit" value="Search" />
+			</form>		</div><!-- end .mobile-search -->
+
+				<nav class="jetpack-social-navigation jetpack-social-navigation-genericons" role="navigation" aria-label="Social Links Menu">
+			<div class="menu-social-media-container"><ul id="menu-social-media-2" class="menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4643"><a href="https://twitter.com/Synced_Global"><span class="screen-reader-text">https://twitter.com/Synced_Global</span></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8405"><a href="https://www.facebook.com/SyncedGlobal/"><span class="screen-reader-text">FB</span></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8407"><a href="https://www.instagram.com/synced_review/"><span class="screen-reader-text">Ins</span></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8408"><a href="https://www.linkedin.com/company/10253612/"><span class="screen-reader-text">Linkedin</span></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8406"><a href="http://www.jiqizhixin.com/"><span class="screen-reader-text">Jiqizhixin</span></a></li>
+</ul></div>		</nav><!-- .jetpack-social-navigation -->
+				<nav id="overlay-nav" class="main-nav cf" role="navigation">
+		<ul id="menu-primary-1" class="menu"><li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-8412"><a href="https://syncedreview.com/category/feature/">Feature</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8413"><a href="https://syncedreview.com/category/united-states/">United States</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8414"><a href="https://syncedreview.com/category/china/">China</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8415"><a href="https://syncedreview.com/category/canada/">Canada</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8497"><a href="https://syncedreview.com/category/japan/">Japan</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8417"><a href="https://syncedreview.com/category/switzerland/">Switzerland</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8416"><a href="https://syncedreview.com/category/australia/">Australia</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-4677"><a href="https://syncedreview.com/category/industry/">Industry</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8420"><a href="https://syncedreview.com/category/ai-globalization/">AI Globalization</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8419"><a href="https://syncedreview.com/category/ai-bi-weekly/">AI Bi-Weekly</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8426"><a href="https://syncedreview.com/category/interview/">Interview</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8418"><a href="https://syncedreview.com/category/conference/">Conference</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8421"><a href="https://syncedreview.com/category/emerging-company/">Emerging Company</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8438"><a href="https://syncedreview.com/category/chinese-ai-talent-in-us/">Chinese AI Talent in US</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category current-post-ancestor current-menu-parent current-post-parent menu-item-4676"><a href="https://syncedreview.com/category/technology/">Technology</a></li>
+<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-has-children menu-item-8423"><a href="https://syncedreview.com/category/community/">Community</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8424"><a href="https://syncedreview.com/category/gmis-2017/">GMIS 2017</a></li>
+	<li class="menu-item menu-item-type-taxonomy menu-item-object-category menu-item-8425"><a href="https://syncedreview.com/category/event/">Event</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children menu-item-4673"><a href="https://syncedreview.com/about-us/">About Us</a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-8515"><a href="https://syncedreview.com/about-us/">About Us</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-4674"><a href="https://syncedreview.com/contact/">Contact Us</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-9149"><a href="https://syncedreview.com/career/">Career</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-12324"><a href="https://syncedreview.com/2018-500-company-ai-adaptivity-report/">Report</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-18106"><a href="https://docs.google.com/forms/d/e/1FAIpQLSdaYAtvk8dtP__l1wvOjEKkQNAfZQNjX-G4OoEWcVU8jFIMug/viewform?usp=sf_link">Contribute to Synced Review</a></li>
+</ul>		</nav><!-- .main-navigation -->
+
+		
+	</div><!-- end .desktop-offcanvas-wrap -->
+</header><!-- end #masthead -->
+
+
+<div id="singlepost-wrap" class="singlepost-wrap cf">
+
+	
+		
+<article id="post-17455" class="post-17455 post type-post status-publish format-standard has-post-thumbnail hentry category-ai category-technology tag-artificial-intelligece tag-openai tag-robotics tag-robots">
+	<header class="entry-header cf">
+					<div class="entry-thumbnail">
+				<a href="https://syncedreview.com/2019/10/15/openai-robot-hand-today-rubiks-cube-tomorrow-the-real-world/"><img width="1440" height="580" src="https://i0.wp.com/syncedreview.com/wp-content/uploads/2019/10/openai-robotics-hand-with-cube-solved-crop-2000w.jpg?resize=1440%2C580&amp;ssl=1" class="attachment-nikau-bigthumb size-nikau-bigthumb wp-post-image" alt="" data-attachment-id="17459" data-permalink="https://syncedreview.com/openai-robotics-hand-with-cube-solved-crop-2000w/" data-orig-file="https://i0.wp.com/syncedreview.com/wp-content/uploads/2019/10/openai-robotics-hand-with-cube-solved-crop-2000w.jpg?fit=1600%2C1066&amp;ssl=1" data-orig-size="1600,1066" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="openai-robotics-hand-with-cube-solved-crop-2000w" data-image-description="" data-medium-file="https://i0.wp.com/syncedreview.com/wp-content/uploads/2019/10/openai-robotics-hand-with-cube-solved-crop-2000w.jpg?fit=300%2C200&amp;ssl=1" data-large-file="https://i0.wp.com/syncedreview.com/wp-content/uploads/2019/10/openai-robotics-hand-with-cube-solved-crop-2000w.jpg?fit=950%2C633&amp;ssl=1" /></a>
+			</div><!-- end .entry-thumbnail -->
+		
+		<div class="title-wrap">
+						<div class="entry-cats">
+				<a href="https://syncedreview.com/category/ai/" rel="category tag">AI</a> <a href="https://syncedreview.com/category/technology/" rel="category tag">Technology</a>			</div><!-- end .entry-cats -->
+						<h1 class="entry-title">OpenAI Robot Hand: Today Rubik&#8217;s Cube, Tomorrow the Real World?</h1>
+						<div class="intro">
+				<p>We’ve lost the brain race, but humans still have unmatched dexterity, right? Wrong. OpenAI’s humanlike five-fingered gripper Dactyl just single-handedly solved a Rubik's cube.</p>
+			</div><!-- .intro -->
+		
+		</div><!-- end .title-wrap -->
+
+		<div class="entry-meta cf">
+			<div class="meta-columnone">
+				<div class="author-pic">
+					<img alt='' src='https://secure.gravatar.com/avatar/329f7fba8fe5bbe0be6e58f416a00e26?s=100&#038;d=identicon&#038;r=g' srcset='https://secure.gravatar.com/avatar/329f7fba8fe5bbe0be6e58f416a00e26?s=200&#038;d=identicon&#038;r=g 2x' class='avatar avatar-100 photo' height='100' width='100' />				</div><!-- end .author-pic -->
+
+				<div class="entry-author"> by <span class="author vcard"><a class="url fn n" href="https://syncedreview.com/author/syncedreview/">Synced</a></span></div><div class="entry-date"><a href="https://syncedreview.com/2019/10/15/openai-robot-hand-today-rubiks-cube-tomorrow-the-real-world/" rel="bookmark"><time class="entry-date published updated" datetime="2019-10-15T13:46:53-04:00">2019-10-15</time></a></div>
+			</div><!-- end .meta-columnone -->
+
+			<div class="meta-columntwo">
+								<div class="entry-comments-single">
+					<span class="entry-comments"><a href="https://syncedreview.com/2019/10/15/openai-robot-hand-today-rubiks-cube-tomorrow-the-real-world/#respond">Comments 0</a></span>				</div><!-- end .entry-comments -->
+							</div><!-- end .meta-columntwo -->
+
+			<div class="meta-columnthree">
+							</div><!-- end .meta-columnthree -->
+		</div><!-- end .entry-meta -->
+	</header><!-- end .entry-header -->
+
+	<div class="contentwrap">
+		
+		<div id="socialicons-sticky">
+			<div id="entry-content" class="entry-content">
+				
+<p>Humans practiced for thousands of years to master the games of Go and chess, but today’s AI-enabled machines can beat our best after just a few days of training. We’ve lost the brain race, but humans still have unmatched dexterity, right? Wrong. OpenAI’s humanlike five-fingered gripper Dactyl just single-handedly solved a Rubik&#8217;s cube.<br><br>The feat builds on the San Francisco-based research company’s 2018 “<a href="https://openai.com/blog/learning-dexterity/">Learning Dexterity</a>” work, in which Dactyl first learned to perform complex in-hand manipulations. Peter Welinder, an OpenAI research scientist on this project, told Synced when the researchers were selecting tasks for Dactyl to work on they wanted something concrete that could also have general purpose applications.</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter"><img data-attachment-id="17458" data-permalink="https://syncedreview.com/2019/10/15/openai-robot-hand-today-rubiks-cube-tomorrow-the-real-world/rubiks-cube-1/" data-orig-file="https://i0.wp.com/syncedreview.com/wp-content/uploads/2019/10/rubiks-cube-1.gif?fit=786%2C428&amp;ssl=1" data-orig-size="786,428" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="rubiks-cube-1" data-image-description="" data-medium-file="https://i0.wp.com/syncedreview.com/wp-content/uploads/2019/10/rubiks-cube-1.gif?fit=300%2C163&amp;ssl=1" data-large-file="https://i0.wp.com/syncedreview.com/wp-content/uploads/2019/10/rubiks-cube-1.gif?fit=786%2C428&amp;ssl=1" src="https://i0.wp.com/syncedreview.com/wp-content/uploads/2019/10/rubiks-cube-1.gif?w=950&#038;ssl=1" alt="" class="wp-image-17458" data-recalc-dims="1"/></figure></div>
+
+
+
+<p>The OpenAI researchers used reinforcement learning algorithms to formulate a control policy so the robot hand would make the right moves based on the state of the cube and its fingers. They employed 64 NVIDIA V100 GPUs and 920 worker machines with 32 CPU cores each for training Dactyl, for a rough equivalence of 13,000 years of experience on the task.<br><br>The system was trained entirely in simulation — it starts off knowing nothing about its robotic hand, the cube, or how the two might physically interact and to what end. Researchers gave the algorithm rewards when it managed to rotate the face of the cube or flip the cube over. Eventually, it learned how to perform the right moves required to solve the Rubik&#8217;s cube.<br><br>To enable the robot hand’s “sensing” capability to capture the cube state, OpenAI researchers trained a convolutional neural network for state prediction, given rendered camera images from three different angles.</p>
+
+
+
+<div class="wp-block-image"><figure class="aligncenter"><img data-attachment-id="17457" data-permalink="https://syncedreview.com/2019/10/15/openai-robot-hand-today-rubiks-cube-tomorrow-the-real-world/image-52-10/" data-orig-file="https://i2.wp.com/syncedreview.com/wp-content/uploads/2019/10/image-52.png?fit=1148%2C713&amp;ssl=1" data-orig-size="1148,713" data-comments-opened="1" data-image-meta="{&quot;aperture&quot;:&quot;0&quot;,&quot;credit&quot;:&quot;&quot;,&quot;camera&quot;:&quot;&quot;,&quot;caption&quot;:&quot;&quot;,&quot;created_timestamp&quot;:&quot;0&quot;,&quot;copyright&quot;:&quot;&quot;,&quot;focal_length&quot;:&quot;0&quot;,&quot;iso&quot;:&quot;0&quot;,&quot;shutter_speed&quot;:&quot;0&quot;,&quot;title&quot;:&quot;&quot;,&quot;orientation&quot;:&quot;0&quot;}" data-image-title="image-52" data-image-description="" data-medium-file="https://i2.wp.com/syncedreview.com/wp-content/uploads/2019/10/image-52.png?fit=300%2C186&amp;ssl=1" data-large-file="https://i2.wp.com/syncedreview.com/wp-content/uploads/2019/10/image-52.png?fit=950%2C590&amp;ssl=1" src="https://i2.wp.com/syncedreview.com/wp-content/uploads/2019/10/image-52.png?fit=950%2C590&amp;ssl=1" alt="" class="wp-image-17457" srcset="https://i2.wp.com/syncedreview.com/wp-content/uploads/2019/10/image-52.png?w=1148&amp;ssl=1 1148w, https://i2.wp.com/syncedreview.com/wp-content/uploads/2019/10/image-52.png?resize=300%2C186&amp;ssl=1 300w, https://i2.wp.com/syncedreview.com/wp-content/uploads/2019/10/image-52.png?resize=768%2C477&amp;ssl=1 768w, https://i2.wp.com/syncedreview.com/wp-content/uploads/2019/10/image-52.png?resize=1024%2C636&amp;ssl=1 1024w, https://i2.wp.com/syncedreview.com/wp-content/uploads/2019/10/image-52.png?resize=600%2C373&amp;ssl=1 600w" sizes="(max-width: 950px) 100vw, 950px" /></figure></div>
+
+
+
+<p>Whereas for humans solving Rubik’s cube is mainly a mental challenge, aligning the colours is child’s play for robots. The real hurdle for a computer system is learning the complexity of the gripper hardware and how to correctly coordinate the movements of fingers and joints relative to the cube.  For Dactyl to handle the real-world complexity, researchers had to ensure the simulation covered as many scenarios as possible.<br><br>They did that using an automatic domain randomization (ADR) method, an extension of the domain randomization technique they used in last year’s block rotation task. “The way it works is basically, in simulation, you randomize all kinds of things. For example, you might make it harder to move one of the fingers of the hand, or you might make the cube heavier or bigger, or you might make it more slippery,” says Welinder.<br><br>Researchers used an off-the-shelf physical simulator, MuJoCo, to generate the parameters for randomization. Says Welinder, “We extended this domain randomization to make it automatic, where how much you randomize all these parameters increases automatically.” Researchers applied ADR to the training for both control policies and cube state estimations.<br><br>Another OpenAI research scientist on the project, Lilian Weng, says it took months of work before the robot hand was robust enough for the real world. “We follow a curriculum process to increase the randomization and assimilation, for example, if we set the friction to a certain range, or cube size to a certain range, we don&#8217;t just train the model on the hardest cases. Instead, we sample all the range, so the model has to handle all the cases within this range. The model has to be able to solve a broader and broader distribution of randomization.”<br><br>While its dexterity is impressive, Dactyl still struggles with speed. Unlike chess or Go where the robot directly confronts an opponent, mastering Rubik’s cube is all about the time required to perform the task. “It doesn’t really matter whether you’re competing with humans or robots,” says Weixing Zhang of the World Cube Association. <br><br>Dactyl does not yet pose a threat to cubers like Zhang. It currently requires four to seven minutes on average to solve a 3x3x3 Rubik’s cube, while Zhang’s one-handed record is 12.59 seconds and a new single-hand world record of 6.82 seconds was just announced from last Sunday&#8217;s Bay Area Speedcubin&#8217; 20 2019. (Last year, a robot developed by two <a href="http://news.mit.edu/2018/featured-video-solving-rubiks-cube-record-time-0316">MIT engineering and computer science students</a> solved Rubik’s cube in 0.38 seconds, but this was a task-specific machine and not a humanlike gripper with wider real world applications.)<br><br>Zhang says he’s not at all worried about robots prevailing in speed cubing competitions, which he treats as an opportunity to hang out and have fun with like-minded friends. “I doubt that any AI can do the latter very well!” <br><br>Welinder meanwhile stresses OpenAI’s goal is not to create a cube champion, but “to see how far we can push dexterity. Ultimately, we want to build robots that are more general purpose, that can do tasks that are more useful to humans.” <br><br>Dactyl was trained on an ever-growing distribution in randomized environments with a memory-augmented policy, which enabled robust performance even in scenarios it was unfamiliar with. In some experiments for example researchers intentionally interfered with the robot hand by binding some of its fingers or sheathing it in a rubber glove. Even in such situations, which the robot had not experienced during training, it still soldiered on and managed to solve the Rubik’s cube. <br><br>The reinforcement learning algorithm researchers used to train Dactyl enables the neural network to learn through trial and error in simulation. This is the same algorithm OpenAI used to train the bots that beat human pros in the computer game Dota 2 last year. By adding the new ADR method, the researchers aim to develop a general approach that can be applied to a wider variety of problems. “We don&#8217;t want to kind of focus on just one problem, to build a hacky solution to do only that,” says Welinder, “the core thing that we care about is this generality.”<br><br>Zhang is not only a regular at Rubik’s cube competitions, he’s also a machine learning engineer with autonomous driving startup comma.ai. Although Zhang recognizes ADR’s potential for generalizing models to other complicated tasks, he suggests a limitation of ADR training is that it can only augment explicitly known and specified environmental variables. “For example, no one is solving self-driving cars without real data, since encoding all relevant environment variables into a simulator is highly impractical, if not impossible,” he says. <br><br>The OpenAI paper <em>Solving Rubik’s Cube with a Robot Hand</em> is available <a href="https://d4mucfpksywv.cloudfront.net/papers/solving-rubiks-cube.pdf">here</a>. </p>
+
+
+
+<hr class="wp-block-separator"/>
+
+
+
+<p><strong>Journalist</strong>:  Yuan Yuan | <strong>Editor</strong>: Michael Sarazen</p>
+<div class="sharedaddy sd-sharing-enabled"><div class="robots-nocontent sd-block sd-social sd-social-icon-text sd-sharing"><h3 class="sd-title">Share this:</h3><div class="sd-content"><ul><li class="share-twitter"><a rel="nofollow noopener noreferrer" data-shared="sharing-twitter-17455" class="share-twitter sd-button share-icon" href="https://syncedreview.com/2019/10/15/openai-robot-hand-today-rubiks-cube-tomorrow-the-real-world/?share=twitter" target="_blank" title="Click to share on Twitter"><span>Twitter</span></a></li><li class="share-facebook"><a rel="nofollow noopener noreferrer" data-shared="sharing-facebook-17455" class="share-facebook sd-button share-icon" href="https://syncedreview.com/2019/10/15/openai-robot-hand-today-rubiks-cube-tomorrow-the-real-world/?share=facebook" target="_blank" title="Click to share on Facebook"><span>Facebook</span></a></li><li class="share-end"></li></ul></div></div></div><div class='sharedaddy sd-block sd-like jetpack-likes-widget-wrapper jetpack-likes-widget-unloaded' id='like-post-wrapper-120977279-17455-5ece2627d3d7e' data-src='https://widgets.wp.com/likes/#blog_id=120977279&amp;post_id=17455&amp;origin=syncedreview.com&amp;obj_id=120977279-17455-5ece2627d3d7e' data-name='like-post-frame-120977279-17455-5ece2627d3d7e'><h3 class="sd-title">Like this:</h3><div class='likes-widget-placeholder post-likes-widget-placeholder' style='height: 55px;'><span class='button'><span>Like</span></span> <span class="loading">Loading...</span></div><span class='sd-text-color'></span><a class='sd-link-color'></a></div>							</div><!-- end .entry-content -->
+
+			<footer class="entry-footer cf">
+									<div class="entry-tags"><span>Tags</span><a href="https://syncedreview.com/tag/artificial-intelligece/" rel="tag">Artificial Intelligence_</a> &bull; <a href="https://syncedreview.com/tag/openai/" rel="tag">OpenAI</a> &bull; <a href="https://syncedreview.com/tag/robotics/" rel="tag">robotics</a> &bull; <a href="https://syncedreview.com/tag/robots/" rel="tag">Robots</a></div>
+								
+<div class="authorbox cf">
+	<div class="author-pic">
+		<img alt='' src='https://secure.gravatar.com/avatar/329f7fba8fe5bbe0be6e58f416a00e26?s=140&#038;d=identicon&#038;r=g' srcset='https://secure.gravatar.com/avatar/329f7fba8fe5bbe0be6e58f416a00e26?s=280&#038;d=identicon&#038;r=g 2x' class='avatar avatar-140 photo' height='140' width='140' />	</div><!-- .author-pic -->
+		<div class="author-heading">
+			<h3 class="author-title"><span>About</span>
+				<a href=https://syncedreview.com/author/syncedreview/> Synced</a>			</h3>
+		</div><!-- end .author-heading -->
+			<p class="author-bio">Machine Intelligence | Technology &amp; Industry | Information &amp; Analysis</p>
+				<div class="author-links">
+					</div><!-- end .author-links -->
+</div><!-- end .authorbox -->
+			</footer><!-- end .entry-footer -->
+
+			
+<div id="comments" class="comments-area cf">
+  <h2 class="comments-title">
+    0 comments on &ldquo;<span>OpenAI Robot Hand: Today Rubik&#8217;s Cube, Tomorrow the Real World?</span>&rdquo;  </h2>
+
+<div class="comments-content cf">
+
+  
+  	<div id="respond" class="comment-respond">
+		<h3 id="reply-title" class="comment-reply-title">Leave a Reply <small><a rel="nofollow" id="cancel-comment-reply-link" href="/2019/10/15/openai-robot-hand-today-rubiks-cube-tomorrow-the-real-world/#respond" style="display:none;">Cancel reply</a></small></h3><form action="https://syncedreview.com/wp-comments-post.php" method="post" id="commentform" class="comment-form" novalidate><p class="comment-notes"><span id="email-notes">Your email address will not be published.</span></p><p class="comment-form-comment"><label for="comment">Comment</label> <textarea id="comment" name="comment" cols="45" rows="8" maxlength="65525" required="required"></textarea></p><p class="comment-form-author"><label for="author">Name</label> <input id="author" name="author" type="text" value="" size="30" maxlength="245" /></p>
+<p class="comment-form-email"><label for="email">Email</label> <input id="email" name="email" type="email" value="" size="30" maxlength="100" aria-describedby="email-notes" /></p>
+<p class="comment-form-url"><label for="url">Website</label> <input id="url" name="url" type="url" value="" size="30" maxlength="200" /></p>
+<p class="comment-subscription-form"><input type="checkbox" name="subscribe_comments" id="subscribe_comments" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;" /> <label class="subscribe-label" id="subscribe-label" for="subscribe_comments">Notify me of follow-up comments by email.</label></p><p class="comment-subscription-form"><input type="checkbox" name="subscribe_blog" id="subscribe_blog" value="subscribe" style="width: auto; -moz-appearance: checkbox; -webkit-appearance: checkbox;" /> <label class="subscribe-label" id="subscribe-blog-label" for="subscribe_blog">Notify me of new posts by email.</label></p><p class="form-submit"><input name="submit" type="submit" id="submit" class="submit" value="Post Comment" /> <input type='hidden' name='comment_post_ID' value='17455' id='comment_post_ID' />
+<input type='hidden' name='comment_parent' id='comment_parent' value='0' />
+</p><p style="display: none;"><input type="hidden" id="akismet_comment_nonce" name="akismet_comment_nonce" value="b2aa19dd92" /></p><p style="display: none;"><input type="hidden" id="ak_js" name="ak_js" value="53"/></p></form>	</div><!-- #respond -->
+	
+  </div><!-- end .comments-content -->
+</div><!-- end #comments .comments-area -->
+
+			
+	<nav class="navigation post-navigation" role="navigation" aria-label="Posts">
+		<h2 class="screen-reader-text">Post navigation</h2>
+		<div class="nav-links"><div class="nav-previous"><a href="https://syncedreview.com/2019/10/14/shake-your-booty-ai-deepfakes-dance-moves-from-a-single-picture/" rel="prev"><span class="meta-nav">Previous Post</span> </a></div><div class="nav-next"><a href="https://syncedreview.com/2019/10/16/using-conditional-gans-to-build-zelda-game-levels/" rel="next"><span class="meta-nav">Next Post</span> </a></div></div>
+	</nav>
+		</div><!-- end #socialicons-sticky -->
+	</div><!-- end .content-wrap -->
+
+</article><!-- end post -17455 -->
+
+	
+	
+<aside id="secondary" class="sidebar widget-area" role="complementary">
+	<section id="google_translate_widget-3" class="widget widget_google_translate_widget"><div id="google_translate_element"></div></section><section id="twitter_timeline-5" class="widget widget_twitter_timeline"><h2 class="widget-title">Follow us on Twitter</h2><a class="twitter-timeline" data-height="1000" data-theme="light" data-border-color="#e8e8e8" data-lang="EN" data-partner="jetpack" href="https://twitter.com/@Synced_Global" href="https://twitter.com/@Synced_Global">My Tweets</a></section></aside><!-- #secondary -->
+
+</div><!-- end .singlepost-wrap -->
+
+			<div class="recommended-posts-wrap cf">
+				<div id='jp-relatedposts' class='jp-relatedposts' >
+	<h3 class="jp-relatedposts-headline"><em>Related</em></h3>
+</div>		</div><!-- end .recommended-posts-wrap -->
+	
+
+<footer id="colophon" class="site-footer cf">
+	<div class="footer-wrap">
+
+					
+	<p class="title-footer">Synced</p>
+
+<div class="footer-widgetarea-wrap cf">
+
+		<aside id="footer-widgetarea-one" class="footer-widgetarea cf" role="complementary">
+			<section id="text-8" class="widget widget_text"><h3 class="footer-widget-title">GLOBAL CENTER (CANADA)</h3>			<div class="textwidget"><p><iframe style="border: 0;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2886.891799194647!2d-79.38393698466815!3d43.650419460628676!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x882b34cd3fd810d7%3A0x18dc773de9090dc7!2s56+Temperance+St+%23700%2C+Toronto%2C+ON+M5H+3V5!5e0!3m2!1szh-CN!2sca!4v1508256225823" frameborder="0" allowfullscreen=""></iframe><br />
+56 Temperance St, #700<br />
+Toronto, ON M5H 3V5</p>
+</div>
+		</section>	</aside><!-- #footer-widgetarea-one -->
+	
+		<aside id="footer-widgetarea-two" class="footer-widgetarea cf" role="complementary">
+			<section id="text-9" class="widget widget_text"><h3 class="footer-widget-title">MASSACHUSETTS OFFICE (US)</h3>			<div class="textwidget"><p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2948.05018013054!2d-71.08575488470665!3d42.3627698429234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e370a5b9258c7b%3A0x7d922521464507ad!2zT25lIEJyb2Fkd2F5LCAxIEJyb2Fkd2F5LCBDYW1icmlkZ2UsIE1BIDAyMTQy576O5Zu9!5e0!3m2!1szh-CN!2sca!4v1508256677416" frameborder="0" style="border:0" allowfullscreen></iframe><br />
+One Broadway, 14th Floor, Cambridge, MA 02142</p>
+</div>
+		</section>	</aside><!-- #footer-widgetarea-two -->
+	
+		<aside id="footer-widgetarea-three" class="footer-widgetarea cf" role="complementary">
+			<section id="text-10" class="widget widget_text"><h3 class="footer-widget-title">CALIFORNIA OFFICE (US)</h3>			<div class="textwidget"><p><iframe style="border: 0;" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3172.229236283449!2d-121.89157498469484!3d37.33708127984152!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x808fccbd27481ec9%3A0xd52b448c018873ab!2zNzUgRSBTYW50YSBDbGFyYSBTdCwgU2FuIEpvc2UsIENBIDk1MTEz576O5Zu9!5e0!3m2!1szh-CN!2sca!4v1508256457928" frameborder="0" allowfullscreen=""></iframe><br />
+75 E Santa Clara St, 6th Floor, San Jose, CA 95113</p>
+</div>
+		</section>	</aside><!-- #footer-widgetarea-three -->
+	
+		<aside id="footer-widgetarea-four" class="footer-widgetarea cf" role="complementary">
+			<section id="text-11" class="widget widget_text"><h3 class="footer-widget-title">CONTACT</h3>			<div class="textwidget"><p><strong>Contact Us @ global.general@jiqizhixin.com</strong></p>
+<p><strong>Visit Us @ <a href="http://www.jiqizhixin.com">Synced China</a></strong></p>
+<p>&nbsp;</p>
+</div>
+		</section>	</aside><!-- #footer-widgetarea-four -->
+	
+</div><!-- end .footer-widgetarea-wrap -->
+	
+			<nav class="jetpack-social-navigation jetpack-social-navigation-genericons" role="navigation" aria-label="Social Links Menu">
+			<div class="menu-social-media-container"><ul id="menu-social-media-3" class="menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-4643"><a href="https://twitter.com/Synced_Global"><span class="screen-reader-text">https://twitter.com/Synced_Global</span></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8405"><a href="https://www.facebook.com/SyncedGlobal/"><span class="screen-reader-text">FB</span></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8407"><a href="https://www.instagram.com/synced_review/"><span class="screen-reader-text">Ins</span></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8408"><a href="https://www.linkedin.com/company/10253612/"><span class="screen-reader-text">Linkedin</span></a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-8406"><a href="http://www.jiqizhixin.com/"><span class="screen-reader-text">Jiqizhixin</span></a></li>
+</ul></div>		</nav><!-- .jetpack-social-navigation -->
+		
+	<div id="site-info" class="cf">
+		<a></a>
+		
+			</div><!-- end #site-info -->
+
+</div><!-- end .footer-wrap -->
+</footer><!-- end #colophon -->
+
+<!--  -->
+<!-- Jetpack Google Analytics -->
+			<script type='text/javascript'>
+				var _gaq = _gaq || [];
+				_gaq.push(['_setAccount', 'UA-90567101-1']);
+_gaq.push(['_trackPageview']);
+				(function() {
+					var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+					ga.src = ('https:' === document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+					var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+				})();
+			</script>
+	<div style="display:none">
+	<div class="grofile-hash-map-329f7fba8fe5bbe0be6e58f416a00e26">
+	</div>
+	</div>
+	<script type="text/javascript">
+		var c = document.body.className;
+		c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+		document.body.className = c;
+	</script>
+	
+	<script type="text/javascript">
+		window.WPCOM_sharing_counts = {"https:\/\/syncedreview.com\/2019\/10\/15\/openai-robot-hand-today-rubiks-cube-tomorrow-the-real-world\/":17455};
+	</script>
+				<script type='text/javascript' src='https://c0.wp.com/p/jetpack/8.5/_inc/build/photon/photon.min.js'></script>
+<script type='text/javascript' src='https://c0.wp.com/p/woocommerce/4.1.1/assets/js/jquery-blockui/jquery.blockUI.min.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wc_add_to_cart_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","i18n_view_cart":"View cart","cart_url":"https:\/\/syncedreview.com","is_cart":"","cart_redirect_after_add":"no"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://c0.wp.com/p/woocommerce/4.1.1/assets/js/frontend/add-to-cart.min.js'></script>
+<script type='text/javascript' src='https://c0.wp.com/p/woocommerce/4.1.1/assets/js/js-cookie/js.cookie.min.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var woocommerce_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://c0.wp.com/p/woocommerce/4.1.1/assets/js/frontend/woocommerce.min.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wc_cart_fragments_params = {"ajax_url":"\/wp-admin\/admin-ajax.php","wc_ajax_url":"\/?wc-ajax=%%endpoint%%","cart_hash_key":"wc_cart_hash_f307ed044ac533b5821a264f84f54a24","fragment_name":"wc_fragments_f307ed044ac533b5821a264f84f54a24","request_timeout":"5000"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://c0.wp.com/p/woocommerce/4.1.1/assets/js/frontend/cart-fragments.min.js'></script>
+<script type='text/javascript'>
+		jQuery( 'body' ).bind( 'wc_fragments_refreshed', function() {
+			var jetpackLazyImagesLoadEvent;
+			try {
+				jetpackLazyImagesLoadEvent = new Event( 'jetpack-lazy-images-load', {
+					bubbles: true,
+					cancelable: true
+				} );
+			} catch ( e ) {
+				jetpackLazyImagesLoadEvent = document.createEvent( 'Event' )
+				jetpackLazyImagesLoadEvent.initEvent( 'jetpack-lazy-images-load', true, true );
+			}
+			jQuery( 'body' ).get( 0 ).dispatchEvent( jetpackLazyImagesLoadEvent );
+		} );
+	
+</script>
+<script type='text/javascript' src='https://secure.gravatar.com/js/gprofiles.js?ver=202022'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var WPGroHo = {"my_hash":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://c0.wp.com/p/jetpack/8.5/modules/wpgroho.js'></script>
+<script type='text/javascript' src='https://c0.wp.com/c/5.4.1/wp-includes/js/comment-reply.min.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var screenReaderText = {"expand":"<span class=\"screen-reader-text\">expand child menu<\/span>","collapse":"<span class=\"screen-reader-text\">collapse child menu<\/span>"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://syncedreview.com/wp-content/themes/nikau/js/functions.js?ver=20160507'></script>
+<script type='text/javascript' src='https://c0.wp.com/p/jetpack/8.5/_inc/build/twitter-timeline.min.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var newsletter = {"messages":{"email_error":"Email address is not correct","name_error":"Name is required","surname_error":"Last name is required","profile_error":"A mandatory field is not filled in","privacy_error":"You must accept the privacy policy"},"profile_max":"20"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://syncedreview.com/wp-content/plugins/newsletter/subscription/validate.js?ver=6.6.9'></script>
+<script type='text/javascript' src='https://c0.wp.com/p/jetpack/8.5/_inc/build/postmessage.min.js'></script>
+<script type='text/javascript' src='https://c0.wp.com/p/jetpack/8.5/_inc/build/jquery.jetpack-resize.min.js'></script>
+<script type='text/javascript' src='https://c0.wp.com/p/jetpack/8.5/_inc/build/likes/queuehandler.min.js'></script>
+<script type='text/javascript' src='https://c0.wp.com/c/5.4.1/wp-includes/js/wp-embed.min.js'></script>
+<script type='text/javascript' src='https://c0.wp.com/p/jetpack/8.5/_inc/build/spin.min.js'></script>
+<script type='text/javascript' src='https://c0.wp.com/p/jetpack/8.5/_inc/build/jquery.spin.min.js'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var jetpackCarouselStrings = {"widths":[370,700,1000,1200,1400,2000],"is_logged_in":"","lang":"en","ajaxurl":"https:\/\/syncedreview.com\/wp-admin\/admin-ajax.php","nonce":"12061ce68d","display_exif":"1","display_geo":"1","single_image_gallery":"1","single_image_gallery_media_file":"","background_color":"black","comment":"Comment","post_comment":"Post Comment","write_comment":"Write a Comment...","loading_comments":"Loading Comments...","download_original":"View full size <span class=\"photo-size\">{0}<span class=\"photo-size-times\">\u00d7<\/span>{1}<\/span>","no_comment_text":"Please be sure to submit some text with your comment.","no_comment_email":"Please provide an email address to comment.","no_comment_author":"Please provide your name to comment.","comment_post_error":"Sorry, but there was an error posting your comment. Please try again later.","comment_approved":"Your comment was approved.","comment_unapproved":"Your comment is in moderation.","camera":"Camera","aperture":"Aperture","shutter_speed":"Shutter Speed","focal_length":"Focal Length","copyright":"Copyright","comment_registration":"0","require_name_email":"0","login_url":"https:\/\/syncedreview.com\/wp-login.php?redirect_to=https%3A%2F%2Fsyncedreview.com%2F2019%2F10%2F15%2Fopenai-robot-hand-today-rubiks-cube-tomorrow-the-real-world%2F","blog_id":"1","meta_data":["camera","aperture","shutter_speed","focal_length","copyright"],"local_comments_commenting_as":"<fieldset><label for=\"email\">Email<\/label> <input type=\"text\" name=\"email\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-email-field\" \/><\/fieldset><fieldset><label for=\"author\">Name<\/label> <input type=\"text\" name=\"author\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-author-field\" \/><\/fieldset><fieldset><label for=\"url\">Website<\/label> <input type=\"text\" name=\"url\" class=\"jp-carousel-comment-form-field jp-carousel-comment-form-text-field\" id=\"jp-carousel-comment-form-url-field\" \/><\/fieldset>"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://c0.wp.com/p/jetpack/8.5/_inc/build/carousel/jetpack-carousel.min.js'></script>
+<script async="async" type='text/javascript' src='https://syncedreview.com/wp-content/plugins/akismet/_inc/form.js?ver=4.1.5'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wp_google_translate_widget = {"lang":"en_US","layout":"0"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://c0.wp.com/p/jetpack/8.5/_inc/build/widgets/google-translate/google-translate.min.js'></script>
+<script type='text/javascript' src='//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit&#038;ver=5.4.1'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var sharing_js_options = {"lang":"en","counts":"1","is_stats_active":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='https://c0.wp.com/p/jetpack/8.5/_inc/build/sharedaddy/sharing.min.js'></script>
+<script type='text/javascript'>
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-twitter', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomtwitter', 'menubar=1,resizable=1,width=600,height=350' );
+				return false;
+			});
+var windowOpen;
+			jQuery( document.body ).on( 'click', 'a.share-facebook', function() {
+				// If there's another sharing window open, close it.
+				if ( 'undefined' !== typeof windowOpen ) {
+					windowOpen.close();
+				}
+				windowOpen = window.open( jQuery( this ).attr( 'href' ), 'wpcomfacebook', 'menubar=1,resizable=1,width=600,height=400' );
+				return false;
+			});
+</script>
+	<iframe src='https://widgets.wp.com/likes/master.html?ver=202022#ver=202022' scrolling='no' id='likes-master' name='likes-master' style='display:none;'></iframe>
+	<div id='likes-other-gravatars'><div class="likes-text"><span>%d</span> bloggers like this:</div><ul class="wpl-avatars sd-like-gravatars"></ul></div>
+	<script type='text/javascript' src='https://stats.wp.com/e-202022.js' async='async' defer='defer'></script>
+<script type='text/javascript'>
+	_stq = window._stq || [];
+	_stq.push([ 'view', {v:'ext',j:'1:8.5',blog:'120977279',post:'17455',tz:'-4',srv:'syncedreview.com'} ]);
+	_stq.push([ 'clickTrackerInit', '120977279', '17455' ]);
+</script>
+
+</body>
+</html>
