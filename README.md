@@ -57,4 +57,9 @@ This is a private learning repository for reinforcement learning techniques used
 8. IROS2019 Paper速读(二): [[Zhihu](https://zhuanlan.zhihu.com/p/98365711)] [[Github](https://github.com/Skylark0924/Reinforcement-Learning-in-Robotics/blob/master/Related%20Works/IROS2019%E9%80%9F%E8%AF%BB(%E4%BA%8C).md)]
 9.  IROS2019 Paper速读(三): [[Zhihu](https://zhuanlan.zhihu.com/p/98712344)] [[Github](https://github.com/Skylark0924/Reinforcement-Learning-in-Robotics/blob/master/Related%20Works/IROS2019%E9%80%9F%E8%AF%BB(%E4%B8%89).md)]
 10. IROS2019 Paper速读(四): [[Zhihu](https://zhuanlan.zhihu.com/p/98762958)] [[Github](https://github.com/Skylark0924/Reinforcement-Learning-in-Robotics/blob/master/Related%20Works/IROS2019%E9%80%9F%E8%AF%BB(%E5%9B%9B).md)]
+11. **【重磅综述】如何在少量尝试下学习机器人强化学习控制** [[Zhihu](https://zhuanlan.zhihu.com/p/144544347)] 
+
+### Simulator
+
+**MuJoCo自定义机器人建模指南** [[Zhihu](https://zhuanlan.zhihu.com/p/143983506)]
 
