@@ -791,7 +791,7 @@ This function will tell us **the improvement compared to the average the action 
 
 If A(s,a) > 0: our gradient is pushed in that direction.
 
-If A(s,a) < 0 (our action does worse than the average value of that state) our gradient is pushed in the opposite direction.
+If A(s,a) < 0: (our action does worse than the average value of that state) our gradient is pushed in the opposite direction.
 
 However, the problem is that we need two value functions. Fortunately, we can use the TD error as a good estimator of the advantage function.
 
