@@ -1,19 +1,12 @@
-#! https://zhuanlan.zhihu.com/p/214454791
+#! https://zhuanlan.zhihu.com/p/218398647
+
 ![Image](https://pic4.zhimg.com/80/v2-2c9b08f09d7ae72ddac0bdec81835674.jpg)
 
-# PR Reasoning Ⅱ：Bandit问题与 UCB / UCT
+# PR Reasoning Ⅱ：Bandit问题与 UCB / UCT / AlphaGo
 
-![Image](https://pic4.zhimg.com/80/v2-f78c27f4f5e8546f7a0f5bc2378424e5.png)
+![Image](https://pic4.zhimg.com/80/v2-535f30d0b33f7aee37dd7757c63288e2.jpg)
 
 [TOC]
-
-TODO：
-
-- ~~UCB~~
-- UCT
-- 受限步长的Bandit
-
-
 
 依旧延续前一章的风格，本章还是在关注强化学习的基础——Bandit问题。
 
@@ -184,5 +177,128 @@ $$
 
 ## UCT —— AlphaGo的成功之秘
 
+**UCT** (Upper Confidence with Tree-based Search) = **MCTS** (Monte Carlo tree search) + **UCB**
+
+因此，想了解 UCT 需要先知道**蒙特卡洛树搜索 MCTS**是怎么解决 Go 的游戏博弈问题的。
+
+### 蒙特卡洛树搜索 MCTS
+
+**蒙特卡洛树搜索的每个循环包括四个步骤**：
+
+- **选择**（Selection）：从根结点*R*开始，选择连续的子结点向下至叶子结点*L*。可以以用**极小极大（Minimax）搜索**（**在搜索树中，每次轮到黑棋走时，走对黑棋最有利的/概率最大的；轮到白棋走时，走对黑棋最不利的/概率最小的**），更好的方法是后文介绍的**UCT**。
+
+- **扩展**（Expansion）：除非任意一方的输赢使得游戏在L结束，否则创建一个或多个子结点并选取其中一个结点*C*。
+- **模拟**（Simulation）：在从结点*C*开始，用随机策略进行多轮游戏直至棋局结束，又称为playout或者rollout。
+- **回溯**（Backpropagation）：使用随机游戏的平均回报，更新从*C*到*R*的路径上的结点信息。
+
+![img](https://pic4.zhimg.com/80/v2-07642d44f1571c5c25437534da06a241_1440w.png)
+
+![img](https://pic3.zhimg.com/80/v2-2e1fec1b6a9b54562bb38c0e342dc096_1440w.jpg?source=1940ef5c)
+
+简而言之，蒙特卡洛的重点在于**用Simulation步随机rollout采样结果的频率来估计某一步棋成功率真实的概率。**
+
+### UCT —— Selection环节的Bandit
+
+上图中选择子结点环节的主要困难是：在对较高平均胜率的动作的深层利用和对少数被模拟动作的探索二者中保持某种平衡。
+
+很显然，UCB的思想派上了用场，2006年Kocsis & Szepesvári提出了将UCB1的思想用在解决树搜索的想法，即 UCT：
+$$
+\frac{w_{i}}{n_{i}}+c_{ } \sqrt{\frac{\ln N_{i}}{n_{i}}}
+$$
+
+- $w_i$：当前节点的子节点获胜次数
+- $n_i$：当前节点的子节点参与模拟的次数
+- $N_i$：当前节点参与模拟的次数
+- $C$：加权系数
+
+蒙特卡洛树搜索通过迭代来一步步地扩展博弈树的规模，UCT 树是不对称生长的，其生长顺序也是不能预知的。它是根据子节点的性能指标导引扩展的方向，这一性能指标便是 UCB 值。它表示在搜索过程中既要充分利用已有的知识，给胜率高的节点更多的机会，又要考虑探索那些暂时胜率不高的兄弟节点，这种对于“利用”（Exploitation）和“探索”（Exploration）进行权衡的关系便体现在 UCT 着法选择函数的定义上， UCB 公式由两部分组成，其中**前一部分就是对已有知识的利用**，而**后一部分则是对未充分模拟节点的探索**。C小偏重利用；而 C大则重视探索。需要通过实验设定参数来控制访问节点的次数和扩展节点的阈值。
+
+**UCT 步骤概括如下：**
+
+1. 由当前局面建立根节点，生成根节点的全部子节点，分别进行模拟对局；
+
+2. 从根节点开始，进行最佳优先搜索；
+
+3. 利用 UCB 公式计算每个子节点的 UCB 值，选择最大值的子节点；
+
+4. 若此节点不是叶节点，则以此节点作为根节点，重复 2；
+
+5. 直到遇到叶节点，如果叶节点未曾经被模拟对局过，对这个叶节点模拟对局；否则为这个叶节点随机生成子节点，并进行模拟对局；
+
+6. 将模拟对局的收益（一般胜为 1 负为 0）按对应颜色更新该节点及各级祖先节点，同时增加该节点以上所有节点的访问次数；
+
+7. 回到 2，除非此轮搜索时间结束或者达到预设循环次数；
+
+8. 从当前局面的子节点中挑选平均收益最高的给出最佳着法。
+
+由此可见 UCT 算法就是在设定的时间内不断完成从根节点按照 UCB 的指引最终走到某一个叶节点的过程。
+
+### AlphaGo 框架解析
+
+[Paper](https://www.nature.com/articles/nature16961)
+
+不敢相信这么一篇里程碑式的RL文章，我竟是今天才坐下来细细品读，大概是名声太大，让我这等菜鸡望而生畏了吧。
+
+论文Title为 **Mastering the game of Go with deep neural networks and tree search**，意即**用深度神经网络和树搜索征服围棋**。显然，AlphaGo应该是 DNN + UCT 的结合。Vanilla AlphaGo 主体包含四部分：
+
+- 学习人类专家策略的 Supervised Learning policy network $p_\sigma(a|s)$；
+- 能从rollout中快速sample actions 的 fast policy $p_\pi(a|s)$；
+- 通过优化自我对弈的最终结局来提升 SL policy network 的 RL policy network $p_p(a|s)$；
+- 用于预测博弈赢者的估值网络 $v_\theta(s)$。
+
+![Image](https://pic4.zhimg.com/80/v2-2068f48d74c82f201cdf6130aa84cc8c.gif)
+
+AlphaGo 用 MCTS 的流程串起了上述四个模块。在树结构的每个边 $(s, a)$ 上存储着三个信息：
+
+- action value $Q(s,a)$
+- visit count $N(s,a)$
+- prior probability $P(s,a)$
+
+#### Selection
+
+在Simulation环节的每一个 time-step $t$ ，都基于当前的 state $s_t$ 选取如下 action $a_t$：
+$$
+a_{t}=\underset{a}{\operatorname{argmax}}\left(Q\left(s_{t}, a\right)+u\left(s_{t}, a\right)\right)
+$$
+其中，
+
+1. bonus $u(s, a)=c_{\text {puct }} P(s, a) \frac{\sqrt{\sum_{b} N_{r}(s, b)}}{1+N_{r}(s, a)}$，这是 PUCT 的一个变种形式；
+
+2. 概率 $P(s, a)=p_{\sigma}(a \mid s)$；
+
+3. $$
+   \begin{array}{l}
+   N(s, a)=\sum_{i=1}^{n} \mathbf{1}(s, a, i) \\
+   Q(s, a)=\frac{1}{N(s, a)} \sum_{i=1}^{n} \mathbf{1}(s, a, i) V\left(s_{L}^{i}\right)\\
+   V\left(s_{L}\right)=(1-\lambda) v_{\theta}\left(s_{L}\right)+\lambda z_{L}
+   \end{array}\\
+   $$
+
+4. $z_t$ 是根据棋局最终结果计算得到的奖励函数，$z_t = \pm r(s_T)$。
+
+#### Simulation
+
+MCTS中最不靠谱的一步当属Simulation的随机Rollout了，AlphaGo用 rollout policy $a_t\sim p_\pi(\cdot|s_t)$ 来取代随机的动作输出。
+
+#### Conclusion
+
+下图展示了 AlphaGo pipeline 式的训练流程，即把前者的输出作为后者的输入。
+
+**人类的棋谱 $\rightarrow$ SL policy network $\rightarrow$ RL policy network $\rightarrow$ value network** 
+
+![Image](https://pic4.zhimg.com/80/v2-cd702978551c9579ffbfe156a7a788c9.png)
+
+**总结一下AlphaGo是如何结合 MCTS 的：**
+
+**Simulation**: 使用 **SL策略网络来预测人类是如何下棋的**。AlphaGo每次要下棋的时候，先运行 SL策略网络一遍，得到一个概率分布，在此基础上进行“随机”：更有可能在概率更大的地方落子。AlphaGo一边模拟自己下棋，一边模拟对手下棋，直至结束，也就是在树搜索的时候达到了叶节点。结束之后，对棋局进行**评估**。**结合估值网络和快速走子策略，得到一个估值函数**，该函数的值越高，越好。 多次模拟后得到每一条边值函数的期望。
+**Selection**：现在是棋局 s，如果在 a 地方，**结合 a 在模拟过程中走过的次数，以及 a 下面的叶节点的估值函数，计算 PUCT 值，选取该值最大的 action 落子.**
+
+![Image](https://pic4.zhimg.com/80/v2-e9722508922f9226d80905fd03187394.png)
+
+
+
 ## Reference
+
 1. [The Multi-Armed Bandit Problem and Its Solutions](https://lilianweng.github.io/lil-log/2018/01/23/the-multi-armed-bandit-problem-and-its-solutions.html)
+2. [MCTS和UCT学习](https://www.jianshu.com/p/e81be2fe7b05)
+3. [28 天自制你的 AlphaGo (6) : 蒙特卡洛树搜索（MCTS）基础](https://zhuanlan.zhihu.com/p/25345778)
