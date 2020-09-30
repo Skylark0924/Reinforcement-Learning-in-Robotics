@@ -2,7 +2,7 @@
 
 ![Image](https://pic4.zhimg.com/80/v2-2c9b08f09d7ae72ddac0bdec81835674.jpg)
 
-# PR Reasoning Ⅱ：Bandit问题与 UCB / UCT / AlphaGo
+# PR Reasoning Ⅰ：Bandit问题与 UCB / UCT / AlphaGo
 
 ![Image](https://pic4.zhimg.com/80/v2-535f30d0b33f7aee37dd7757c63288e2.jpg)
 
