@@ -1,4 +1,4 @@
-# PR StructureⅠ：Graph Neural Network An Introduction 
+# PR StructuredⅠ：Graph Neural Network An Introduction 
 
 [TOC]
 

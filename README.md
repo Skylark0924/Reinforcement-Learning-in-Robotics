@@ -96,11 +96,8 @@ This is a private learning repository for reinforcement learning techniques used
 7. **IROS2019 Paper速读(四)** [[Zhihu](https://zhuanlan.zhihu.com/p/98762958)]  
 
 ## Simulator
-
 [刘浚嘉：MuJoCo自定义机器人建模指南](https://zhuanlan.zhihu.com/p/143983506 'card')
 
 ## 专栏关联Github代码库
-
-[Reinforcement-Learning-in-Robotics](https://github.com/Skylark0924/Reinforcement-Learning-in-Robotics 'card')
-
+[Reinforcement-Learning-in-Robotics](https://github.com/Skylark0924/Reinforcement-Learning-in-Robotics 'card')\
 [Machine-Learning-is-ALL-You-Need](https://github.com/Skylark0924/Machine-Learning-is-ALL-You-Need 'card')
