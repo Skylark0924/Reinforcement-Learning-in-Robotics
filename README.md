@@ -46,8 +46,10 @@ This is a private learning repository for reinforcement learning techniques used
 13. **PR Structured Ⅲ**：马尔可夫、隐马尔可夫 HMM 、条件随机场 CRF 全解析及其python实现 [[Zhihu](https://zhuanlan.zhihu.com/p/259660645)]
 14. **PR Structured Ⅳ**：General / Graph Conditional Random Field (CRF) 及其 python 实现 [[Zhihu](https://zhuanlan.zhihu.com/p/259883878)]
 15. **PR Reasoning Ⅰ**：Bandit问题与 UCB / UCT / AlphaGo [[Zhihu](https://zhuanlan.zhihu.com/p/218398647)]
-16. **PR Memory Ⅰ**：Memory systems 2018 – towards a new paradigm **【重磅综述】记忆系统——神经科学的启示** [[Zhihu](https://zhuanlan.zhihu.com/p/166692908)]
-17. **PR Perspective Ⅰ**：Embodied AI 的新浪潮 —— new generation of AI [[Zhihu](https://zhuanlan.zhihu.com/p/260562672)]
+16. **PR Reasoning Ⅱ**：Relational Inductive bias 关系归纳偏置及其在深度学习中的应用 [[Zhihu](https://zhuanlan.zhihu.com/p/261081574)]
+17. **PR Reasoning Ⅲ**：基于图表征的关系推理框架 —— Graph Network [[Zhihu](https://zhuanlan.zhihu.com/p/261127145)]
+18. **PR Memory Ⅰ**：Memory systems 2018 – towards a new paradigm **【重磅综述】记忆系统——神经科学的启示** [[Zhihu](https://zhuanlan.zhihu.com/p/166692908)]
+19. **PR Perspective Ⅰ**：Embodied AI 的新浪潮 —— new generation of AI [[Zhihu](https://zhuanlan.zhihu.com/p/260562672)]
 
 ## Meta-Learning
 
