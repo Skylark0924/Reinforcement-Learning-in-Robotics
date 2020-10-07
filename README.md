@@ -2,7 +2,7 @@
 
 ![Image](https://pic4.zhimg.com/80/v2-3e877a91c30c77936e0a6e07bf1a9e83.jpg)
 
-# Reinforcement-Learning-in-Robotics 专栏目录
+# Reinforcement-Learning-in-Robotics Content 专栏目录
 
 This is a private learning repository for reinforcement learning techniques used in robotics. 
 
