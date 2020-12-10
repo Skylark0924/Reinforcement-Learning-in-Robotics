@@ -45,13 +45,14 @@ This is a private learning repository for **R**einforcement learning techniques,
 12. **PR Structured Ⅱ**：Structured Probabilistic Model 结构化概率模型 [[Zhihu](https://zhuanlan.zhihu.com/p/161703636)]
 13. **PR Structured Ⅲ**：马尔可夫、隐马尔可夫 HMM 、条件随机场 CRF 全解析及其python实现 [[Zhihu](https://zhuanlan.zhihu.com/p/259660645)]
 14. **PR Structured Ⅳ**：General / Graph Conditional Random Field (CRF) 及其 python 实现 [[Zhihu](https://zhuanlan.zhihu.com/p/259883878)]
-15. **PR Reasoning 序**：Reasoning Robotics 推理机器人学习路线与资源汇总 [[Zhihu](https://zhuanlan.zhihu.com/p/262568794)]
-16. **PR Reasoning Ⅰ**：Bandit问题与 UCB / UCT / AlphaGo [[Zhihu](https://zhuanlan.zhihu.com/p/218398647)]
-17. **PR Reasoning Ⅱ**：Relational Inductive bias 关系归纳偏置及其在深度学习中的应用 [[Zhihu](https://zhuanlan.zhihu.com/p/261081574)]
-18. **PR Reasoning Ⅲ**：基于图表征的关系推理框架 —— Graph Network [[Zhihu](https://zhuanlan.zhihu.com/p/261127145)]
-19. **PR Reasoning Ⅳ**：数理逻辑（命题逻辑、谓词逻辑）知识整理 [[Zhihu](https://zhuanlan.zhihu.com/p/262984951)]
-20. **PR Memory Ⅰ**：Memory systems 2018 – towards a new paradigm **【重磅综述】记忆系统——神经科学的启示** [[Zhihu](https://zhuanlan.zhihu.com/p/166692908)]
-21. **PR Perspective Ⅰ**：Embodied AI 的新浪潮 —— new generation of AI [[Zhihu](https://zhuanlan.zhihu.com/p/260562672)]
+15. **PR Structured Ⅴ**：GraphRNN——将图生成问题转化为序列生成 [[Zhihu](https://zhuanlan.zhihu.com/p/276873641)]
+16. **PR Reasoning 序**：Reasoning Robotics 推理机器人学习路线与资源汇总 [[Zhihu](https://zhuanlan.zhihu.com/p/262568794)]
+17. **PR Reasoning Ⅰ**：Bandit问题与 UCB / UCT / AlphaGo [[Zhihu](https://zhuanlan.zhihu.com/p/218398647)]
+18. **PR Reasoning Ⅱ**：Relational Inductive bias 关系归纳偏置及其在深度学习中的应用 [[Zhihu](https://zhuanlan.zhihu.com/p/261081574)]
+19. **PR Reasoning Ⅲ**：基于图表征的关系推理框架 —— Graph Network [[Zhihu](https://zhuanlan.zhihu.com/p/261127145)]
+20. **PR Reasoning Ⅳ**：数理逻辑（命题逻辑、谓词逻辑）知识整理 [[Zhihu](https://zhuanlan.zhihu.com/p/262984951)]
+21. **PR Memory Ⅰ**：Memory systems 2018 – towards a new paradigm **【重磅综述】记忆系统——神经科学的启示** [[Zhihu](https://zhuanlan.zhihu.com/p/166692908)]
+22. **PR Perspective Ⅰ**：Embodied AI 的新浪潮 —— new generation of AI [[Zhihu](https://zhuanlan.zhihu.com/p/260562672)]
 
 ## Meta-Learning
 
@@ -103,8 +104,11 @@ This is a private learning repository for **R**einforcement learning techniques,
 [刘浚嘉：MuJoCo自定义机器人建模指南](https://zhuanlan.zhihu.com/p/143983506 'card')
 
 ## Tools
-1. **Tools Ⅰ**：如何用 PyQt5 和 Qt Designer 在 Pycharm 中愉快地开发软件 [[Zhihu](https://zhuanlan.zhihu.com/p/259564109)]  
-2. **Tools Ⅱ**：Arxiv 论文提交流程——看这篇就够了 [[Zhihu](https://zhuanlan.zhihu.com/p/109405192)]  
+1. **Tools 1**：如何用 PyQt5 和 Qt Designer 在 Pycharm 中愉快地开发软件 [[Zhihu](https://zhuanlan.zhihu.com/p/259564109)]  
+2. **Tools 2**：Arxiv 论文提交流程——看这篇就够了 [[Zhihu](https://zhuanlan.zhihu.com/p/109405192)]  
+3. **Tools 3**：Python socket 服务器与客户端双向通信（服务器NAT，文件传输） [[Zhihu](https://zhuanlan.zhihu.com/p/263630359)]  
+4. **Tools 4**：Python三行转并行——真香！[[Zhihu](https://zhuanlan.zhihu.com/p/109405192)]  
+5. **Tools 5**：Python三行转并行后续——多进程全局变量 [[Zhihu](https://zhuanlan.zhihu.com/p/273508904)]  
 
 ## 专栏关联Github代码库
 [Reinforcement-Learning-in-Robotics](https://github.com/Skylark0924/Reinforcement-Learning-in-Robotics 'card')\
