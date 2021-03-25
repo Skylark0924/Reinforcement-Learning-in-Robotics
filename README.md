@@ -53,6 +53,9 @@ This is a private learning repository for **R**einforcement learning techniques,
 20. **PR Reasoning Ⅳ**：数理逻辑（命题逻辑、谓词逻辑）知识整理 [[Zhihu](https://zhuanlan.zhihu.com/p/262984951)]
 21. **PR Memory Ⅰ**：Memory systems 2018 – towards a new paradigm **【重磅综述】记忆系统——神经科学的启示** [[Zhihu](https://zhuanlan.zhihu.com/p/166692908)]
 22. **PR Perspective Ⅰ**：Embodied AI 的新浪潮 —— new generation of AI [[Zhihu](https://zhuanlan.zhihu.com/p/260562672)]
+23. **PR Efficient Ⅰ**：机器人中的数据高效强化学习 [[Zhihu](https://zhuanlan.zhihu.com/p/358668613)] 
+24. **PR Efficient Ⅱ**：Bayesian Transfer RL with prior knowledge [[Zhihu](https://zhuanlan.zhihu.com/p/359620737)] 
+25. **PR Efficient Ⅲ**：像训练狗狗一样高效地训练机器人 [[Zhihu](https://zhuanlan.zhihu.com/p/359776893)] 
 
 ## Meta-Learning
 
