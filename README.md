@@ -56,6 +56,8 @@ This is a private learning repository for **R**einforcement learning techniques,
 23. **PR Efficient Ⅰ**：机器人中的数据高效强化学习 [[Zhihu](https://zhuanlan.zhihu.com/p/358668613)] 
 24. **PR Efficient Ⅱ**：Bayesian Transfer RL with prior knowledge [[Zhihu](https://zhuanlan.zhihu.com/p/359620737)] 
 25. **PR Efficient Ⅲ**：像训练狗狗一样高效地训练机器人 [[Zhihu](https://zhuanlan.zhihu.com/p/359776893)] 
+26. **PR Efficient Ⅳ**：五分钟内让四足机器人自主学会行走 [[Zhihu](https://zhuanlan.zhihu.com/p/360314680)] 
+27. **PR Efficient Ⅴ**：自预测表征，让RL agent高效地理解世界 [[Zhihu](https://zhuanlan.zhihu.com/p/360526111)] 
 
 ## Meta-Learning
 
