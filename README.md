@@ -1,6 +1,9 @@
 #! https://zhuanlan.zhihu.com/p/143392167
 
-![Image](https://pic4.zhimg.com/80/v2-3e877a91c30c77936e0a6e07bf1a9e83.jpg)
+![](https://pic4.zhimg.com/80/v2-3e877a91c30c77936e0a6e07bf1a9e83.jpg)
+
+# **如需转发，烦请邮件告知  [junjialiu@sjtu.edu.cn](junjialiu@sjtu.edu.cn)**
+
 
 # Reinforcement-Learning-in-Robotics Content 专栏目录
 
