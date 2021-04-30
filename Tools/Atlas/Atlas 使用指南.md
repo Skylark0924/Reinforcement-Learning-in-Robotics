@@ -83,3 +83,4 @@ cd /home/lab/Ascend/MindStudio/bin
 
 加载.om
 
+模型加载
