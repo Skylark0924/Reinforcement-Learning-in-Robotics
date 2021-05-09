@@ -21,7 +21,27 @@
 
 ## 制卡
 
+### 官方教程
+
 https://support.huaweicloud.com/Atlas200DK202/
+
+### 步骤
+
+#### 下载软件包
+
+1. 下载Arm64 Server版本的Ubuntu18.04.5：https://repo.huaweicloud.com/ubuntu-cdimage/releases/18.04.5/release/ubuntu-18.04.5-server-arm64.iso 
+
+   > 注意：是ARM64不是AMD64
+
+2. 下载1.0.9.alpha版NPU驱动：https://repo.huaweicloud.com/ubuntu-cdimage/releases/18.04.5/release/ubuntu-18.04.5-server-amd64.iso
+
+3. 下载CANN软件包(ARM平台推理引擎软件包，Ascend-cann-nnrt_3.3.0.alpha006_linux-aarch64.run)：https://www.hiascend.com/zh/software/cann/community
+
+   > 仅支持 20.2 和 3.3.0 开头的CANN
+
+#### 制卡
+
+
 
 
 
