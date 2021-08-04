@@ -7,7 +7,7 @@
 
 # Reinforcement-Learning-in-Robotics Content 专栏目录
 
-This is a private learning repository for **R**einforcement learning techniques, **R**easoning, and **R**epresentation learning used in **R**obotics, founded for **Real intelligence**.
+This is a private learning repository about **R**einforcement learning techniques, **R**easoning, and **R**epresentation learning used in **R**obotics, founded for **Real intelligence**.
 
 ## Reinforcement Learning Foundation
 
@@ -56,11 +56,12 @@ This is a private learning repository for **R**einforcement learning techniques,
 20. **PR Reasoning Ⅳ**：数理逻辑（命题逻辑、谓词逻辑）知识整理 [[Zhihu](https://zhuanlan.zhihu.com/p/262984951)]
 21. **PR Memory Ⅰ**：Memory systems 2018 – towards a new paradigm **【重磅综述】记忆系统——神经科学的启示** [[Zhihu](https://zhuanlan.zhihu.com/p/166692908)]
 22. **PR Perspective Ⅰ**：Embodied AI 的新浪潮 —— new generation of AI [[Zhihu](https://zhuanlan.zhihu.com/p/260562672)]
-23. **PR Efficient Ⅰ**：机器人中的数据高效强化学习 [[Zhihu](https://zhuanlan.zhihu.com/p/358668613)] 
-24. **PR Efficient Ⅱ**：Bayesian Transfer RL with prior knowledge [[Zhihu](https://zhuanlan.zhihu.com/p/359620737)] 
-25. **PR Efficient Ⅲ**：像训练狗狗一样高效地训练机器人 [[Zhihu](https://zhuanlan.zhihu.com/p/359776893)] 
-26. **PR Efficient Ⅳ**：五分钟内让四足机器人自主学会行走 [[Zhihu](https://zhuanlan.zhihu.com/p/360314680)] 
-27. **PR Efficient Ⅴ**：自预测表征，让RL agent高效地理解世界 [[Zhihu](https://zhuanlan.zhihu.com/p/360526111)] 
+23. **PR Perspective Ⅱ**：2021/08/03 近期 Robot Learning 领域大事件及思考 [[Zhihu](https://zhuanlan.zhihu.com/p/395562430)]
+24. **PR Efficient Ⅰ**：机器人中的数据高效强化学习 [[Zhihu](https://zhuanlan.zhihu.com/p/358668613)] 
+25. **PR Efficient Ⅱ**：Bayesian Transfer RL with prior knowledge [[Zhihu](https://zhuanlan.zhihu.com/p/359620737)] 
+26. **PR Efficient Ⅲ**：像训练狗狗一样高效地训练机器人 [[Zhihu](https://zhuanlan.zhihu.com/p/359776893)] 
+27. **PR Efficient Ⅳ**：五分钟内让四足机器人自主学会行走 [[Zhihu](https://zhuanlan.zhihu.com/p/360314680)] 
+28. **PR Efficient Ⅴ**：自预测表征，让RL agent高效地理解世界 [[Zhihu](https://zhuanlan.zhihu.com/p/360526111)] 
 
 ## Meta-Learning
 
@@ -73,6 +74,9 @@ This is a private learning repository for **R**einforcement learning techniques,
 1. **Imitation Learning Ⅰ：模仿学习** (Imitation Learning) 入门指南 [[Zhihu](https://zhuanlan.zhihu.com/p/140348314)]
 2. **Imitation Learning Ⅱ**：DAgger透彻理论分析 [[Zhihu](https://zhuanlan.zhihu.com/p/140939491)]
 3. **Imitation Learning Ⅲ**：EnsembleDAgger 一种贝叶斯DAgger [[Zhihu](https://zhuanlan.zhihu.com/p/140952343)]
+
+## Sim2Real
+Pending...
 
 ## RL from Demonstrations
 
