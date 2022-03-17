@@ -75,8 +75,6 @@ This is a private learning repository about **R**einforcement learning technique
 2. **Imitation Learning Ⅱ**：DAgger透彻理论分析 [[Zhihu](https://zhuanlan.zhihu.com/p/140939491)]
 3. **Imitation Learning Ⅲ**：EnsembleDAgger 一种贝叶斯DAgger [[Zhihu](https://zhuanlan.zhihu.com/p/140952343)]
 
-## Sim2Real
-Pending...
 
 ## RL from Demonstrations
 
@@ -113,7 +111,8 @@ Pending...
 7. **IROS2019 Paper速读(四)** [[Zhihu](https://zhuanlan.zhihu.com/p/98762958)]  
 
 ## Simulator
-[刘浚嘉：MuJoCo自定义机器人建模指南](https://zhuanlan.zhihu.com/p/143983506 'card')
+1. [MuJoCo自定义机器人建模指南](https://zhuanlan.zhihu.com/p/143983506)
+2. [Sim2real in Robotics: An Introduction]()
 
 ## Tools
 1. **Tools 1**：如何用 PyQt5 和 Qt Designer 在 Pycharm 中愉快地开发软件 [[Zhihu](https://zhuanlan.zhihu.com/p/259564109)]  
