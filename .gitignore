@@ -1,3 +1,5 @@
 Reasoning/BOOKS
 
 *.pdf
+.idea/
+.vscode/
