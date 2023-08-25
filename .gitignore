@@ -3,3 +3,5 @@ Reasoning/BOOKS
 *.pdf
 .idea/
 .vscode/
+
+.DS_Store
